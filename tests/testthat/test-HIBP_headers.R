@@ -28,3 +28,11 @@ test_that("alternative agents work",{
   res<-HIBP_headers(agent="bloo")
   expect_equal(res$headers,c(`api-version`="2",`User-Agent`="bloo"))
 })
+
+test_that("handles incorrect values",{
+  error<-"Problematic agent"
+  expect_error(HIBP_headers(1), error)
+  expect_error(HIBP_headers(list()), error)
+  expect_error(HIBP_headers(LETTERS[1:2]), error)
+
+})
