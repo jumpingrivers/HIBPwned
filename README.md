@@ -2,7 +2,7 @@
 HIBPwned
 ========
 
-[![Travis-CI Build Status](https://travis-ci.org/stephlocke/HIBPwned.svg?branch=master)](https://travis-ci.org/stephlocke/HIBPwned)
+[![Travis-CI Build Status](https://travis-ci.org/stephlocke/HIBPwned.svg?branch=master)](https://travis-ci.org/stephlocke/HIBPwned) [![Coverage Status](https://img.shields.io/coveralls/stephlocke/HIBPwned.svg)](https://coveralls.io/r/stephlocke/HIBPwned?branch=master)
 
 Utilising the [HaveIBeenPwned.com API](https://haveibeenpwned.com/API/v2), check whether email addresses and/or user names have been present in a publicly disclosed data breach.
 
