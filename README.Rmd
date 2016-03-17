@@ -13,3 +13,5 @@ knitr::opts_chunk$set(
   fig.path = "README-"
 )
 ```
+# HIBPwned
+[![Travis-CI Build Status](https://travis-ci.org/stephlocke/HIBPwned.svg?branch=master)](https://travis-ci.org/stephlocke/HIBPwned)

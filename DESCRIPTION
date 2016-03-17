@@ -10,10 +10,14 @@ Authors@R: c(person("Steph", "Locke"
              , comment="HaveIBeenPwned.com"
              ))
 Description: Utilising the HaveIBeenPwned.com
-             API, check whether email addresses and/or user names have been present
-             in a publicly disclosed data breach
-Depends: R (>= 3.2.3)
+    API, check whether email addresses and/or user names have been present
+    in a publicly disclosed data breach.
+Depends:
+    R (>= 3.2.3)
 License: MIT + file LICENSE
 LazyData: true
-Suggests: testthat
-Imports: httr
+Suggests:
+    testthat
+Imports:
+    httr
+RoxygenNote: 5.0.1
