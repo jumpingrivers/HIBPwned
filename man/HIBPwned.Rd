@@ -4,8 +4,9 @@
 \name{HIBPwned}
 \alias{HIBPwned}
 \alias{HIBPwned-package}
-\title{HIBPwned.}
+\title{HIBPwned}
 \description{
-HIBPwned.
+Utilising the HaveIBeenPwned.com API, check whether email addresses and/or
+user names have been present in a publicly disclosed data breach.
 }
 
