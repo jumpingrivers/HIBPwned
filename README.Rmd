@@ -30,6 +30,9 @@ library("HIBPwned")
 account_breaches("steff.sullivan@gmail.com", truncate=TRUE)
 ```
 
-
+```{r}
+library("HIBPwned")
+breached_sites("adobe.com")
+```
 ----
 Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
