@@ -88,6 +88,7 @@ test_that("account_breaches works for multiple accounts",{
     expect_gte(ncol(res[[a]]),1) # key test
     expect_gte(nrow(res[[a]]),1)
   }
+
   # With domain (no breach)
   res<-account_breaches(acct, domain = "xyz.com")
 
@@ -101,6 +102,8 @@ test_that("account_breaches works for multiple accounts",{
     expect_gte(nrow(res[[a]]),1)
   }
 
+  # With header passthrough
+  expect_error(account_breaches(acct,agent="blah"),NA)
 })
 
 test_that("handles incorrect values",{
