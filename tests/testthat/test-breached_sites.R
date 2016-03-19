@@ -1,4 +1,4 @@
-context("breached-sites")
+context("breached_sites")
 
 test_that("breached_sites works",{
 
