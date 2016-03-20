@@ -2,6 +2,7 @@
 
 export(HIBP_headers)
 export(account_breaches)
+export(breached_site)
 export(breached_sites)
 importFrom(httr,add_headers)
 importFrom(httr,content)
