@@ -1,6 +1,6 @@
 Package: HIBPwned
 Title: Bindings for the HaveIBeenPwned.com data breach API
-Version: 0.0.0.9004
+Version: 0.0.0.9005
 Authors@R: c(person("Steph", "Locke"
              , email = "stephanie.g.locke@gmail.com"
              , role = c("aut", "cre"))
@@ -17,9 +17,12 @@ Depends:
 License: MIT + file LICENSE
 LazyData: true
 Suggests:
-    testthat
+    testthat,
+    knitr,
+    rmarkdown
 Imports:
     httr,
     urltools,
     jsonlite
 RoxygenNote: 5.0.1
+VignetteBuilder: knitr

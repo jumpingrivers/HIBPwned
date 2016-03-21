@@ -1,0 +1,36 @@
+---
+title: "Have I Been Pwned? API"
+author: "Steph Locke"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Have I Been Pwned? API}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+Utilising the [HaveIBeenPwned.com API](https://haveibeenpwned.com/API/v2), check whether email addresses and/or user names have been present in a publicly disclosed data breach.
+
+The R package aims to be / is a feature complete wrapper of the HaveIBeenPowned API, and is useful for situations where you may want to assess data breaches or check whether one or more email addresses have been compromised.
+
+If you get a lot of value out of this package, do consider [donating to HIBP](https://haveibeenpwned.com/Donate) since Troy Hunt does not put any limits on the API and it's a tremendous service.
+
+```{r, results='hide', message=FALSE, warning=FALSE}
+library("HIBPwned")
+```
+
+```{r}
+account_breaches("steff.sullivan@gmail.com", truncate=TRUE)
+```
+
+```{r}
+breached_sites("adobe.com")
+```
+
+```{r}
+breached_site("Adobe")
+```
+
+```{r}
+data_classes()
+```
