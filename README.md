@@ -74,4 +74,8 @@ data_classes()
 
 ------------------------------------------------------------------------
 
+If you get a lot of value out of this package, do consider [donating to HIBP](https://haveibeenpwned.com/Donate) since Troy Hunt does not put any limits on the API and it's a tremendous service.
+
+------------------------------------------------------------------------
+
 Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
