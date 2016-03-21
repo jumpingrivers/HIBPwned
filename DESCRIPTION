@@ -26,3 +26,5 @@ Imports:
     jsonlite
 RoxygenNote: 5.0.1
 VignetteBuilder: knitr
+URL: https://github.com/stephlocke/HIBPwned
+BugReports: https://github.com/stephlocke/HIBPwned/issues
