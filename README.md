@@ -44,6 +44,34 @@ breached_site("Adobe")
 #> 1       FALSE      svg
 ```
 
+``` r
+data_classes()
+#>  [1] "Account balances"               "Age groups"                    
+#>  [3] "Avatars"                        "Career levels"                 
+#>  [5] "Credit cards"                   "Customer interactions"         
+#>  [7] "Dates of birth"                 "Device usage tracking data"    
+#>  [9] "Education levels"               "Email addresses"               
+#> [11] "Email messages"                 "Employers"                     
+#> [13] "Ethnicities"                    "Genders"                       
+#> [15] "Geographic location"            "Government issued IDs"         
+#> [17] "Historical passwords"           "Home addresses"                
+#> [19] "Homepage URLs"                  "Instant messenger identities"  
+#> [21] "IP addresses"                   "Job titles"                    
+#> [23] "MAC addresses"                  "Names"                         
+#> [25] "Nicknames"                      "Passport numbers"              
+#> [27] "Password hints"                 "Passwords"                     
+#> [29] "Payment histories"              "Phone numbers"                 
+#> [31] "Private messages"               "Purchases"                     
+#> [33] "Races"                          "Recovery email addresses"      
+#> [35] "Relationship statuses"          "Reward program balances"       
+#> [37] "Salutations"                    "Security questions and answers"
+#> [39] "Sexual preferences"             "SMS messages"                  
+#> [41] "Social connections"             "Spoken languages"              
+#> [43] "Time zones"                     "User agent details"            
+#> [45] "User website URLs"              "Usernames"                     
+#> [47] "Website activity"               "Years of birth"
+```
+
 ------------------------------------------------------------------------
 
 Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
