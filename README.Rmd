@@ -42,6 +42,10 @@ breached_site("Adobe")
 data_classes()
 ```
 
+```{r}
+pastes("foo@bar.com")
+```
+
 ----
 
 If you get a lot of value out of this package, do consider [donating to HIBP](https://haveibeenpwned.com/Donate) since Troy Hunt does not put any limits on the API and it's a tremendous service.

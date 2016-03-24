@@ -72,6 +72,62 @@ data_classes()
 #> [47] "Website activity"               "Years of birth"
 ```
 
+``` r
+pastes("foo@bar.com")
+#> $`foo@bar.com`
+#>      Source                                    Id
+#> 1  Pastebin                              urh5D0dT
+#> 2  Pastebin                              VXXkSVa6
+#> 3  Pastebin                              vwXXWCEN
+#> 4  Pastebin                              qAegkpzu
+#> 5  Pastebin                              Lg80iL8k
+#> 6  Pastebin                              uMq1W2mx
+#> 7  Pastebin                              9ZKSRx5i
+#> 8  Pastebin                              L6fZS5VC
+#> 9  Pastebin                              b6taeWri
+#> 10 Pastebin                              ba6LmF9Z
+#> 11 Pastebin                              wXb5W8GV
+#> 12 Pastebin                              EE8GM0ed
+#> 13 Pastebin                              8Q0BvKD8
+#> 14 Pastebin                              C4GdBDnP
+#> 15 AdHocUrl http://siph0n.in/exploits.php?id=4364
+#> 16 AdHocUrl http://siph0n.in/exploits.php?id=1154
+#>                                                          Title
+#> 1                                                         <NA>
+#> 2                                                      Twitter
+#> 3                                                 AMEmails.txt
+#> 4  Working Fresh EMails Hacked [Gmail,Hotmail,Yahoo..] By Aluf
+#> 5                                        www.captainfarris.com
+#> 6                                                npm-debug.log
+#> 7                                  1K Combo [CrackingSeal.net]
+#> 8                                                 kwekwekwekwk
+#> 9                                                         <NA>
+#> 10                                  Hacked by Kashirmi Cheetah
+#> 11                                               #freenode-log
+#> 12                                                        <NA>
+#> 13                                                      syslog
+#> 14                                          #secuinside13 logs
+#> 15                                                   siph0n.in
+#> 16                                                   siph0n.in
+#>                    Date EmailCount
+#> 1  2016-01-25T16:54:32Z         22
+#> 2  2015-12-12T15:52:27Z         90
+#> 3  2015-08-19T05:32:23Z      10437
+#> 4  2015-06-09T11:16:36Z       7663
+#> 5  2015-05-29T20:32:46Z       1081
+#> 6  2015-05-10T23:57:41Z         40
+#> 7  2015-04-19T13:06:08Z        999
+#> 8  2015-02-18T15:30:00Z      14427
+#> 9  2014-11-17T08:11:00Z        972
+#> 10 2014-09-08T08:09:00Z       1799
+#> 11 2014-07-06T19:07:00Z        187
+#> 12 2014-03-26T17:03:00Z         80
+#> 13 2014-03-04T19:03:00Z        139
+#> 14 2013-05-26T22:05:00Z        255
+#> 15                 <NA>      89270
+#> 16                 <NA>       1595
+```
+
 ------------------------------------------------------------------------
 
 If you get a lot of value out of this package, do consider [donating to HIBP](https://haveibeenpwned.com/Donate) since Troy Hunt does not put any limits on the API and it's a tremendous service.
