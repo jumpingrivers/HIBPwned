@@ -2,74 +2,88 @@
 HIBPwned
 ========
 
-[![Travis-CI Build Status](https://travis-ci.org/stephlocke/HIBPwned.svg?branch=master)](https://travis-ci.org/stephlocke/HIBPwned) [![Coverage Status](https://img.shields.io/coveralls/stephlocke/HIBPwned.svg)](https://coveralls.io/r/stephlocke/HIBPwned?branch=master)
+[![Travis-CI Build Status](https://travis-ci.org/censornet/HIBPwned.svg?branch=master)](https://travis-ci.org/censornet/HIBPwned) [![Coverage Status](https://img.shields.io/coveralls/censornet/HIBPwned.svg)](https://coveralls.io/r/censornet/HIBPwned?branch=master)
 
 Utilising the [HaveIBeenPwned.com API](https://haveibeenpwned.com/API/v2), check whether email addresses and/or user names have been present in a publicly disclosed data breach.
 
 ``` r
 if(!require("devtools")) install.packages("devtools")
 # Get or upgrade from github
-devtools::install_github("stephlocke/HIBPwned")
+devtools::install_github("censornet/HIBPwned")
 library("HIBPwned")
 ```
 
 ``` r
 account_breaches("steff.sullivan@gmail.com", truncate=TRUE)
 #> $`steff.sullivan@gmail.com`
-#>    Name
-#> 1 Adobe
+#>       Name
+#> 1    Adobe
+#> 2 LinkedIn
 ```
 
 ``` r
 breached_sites("adobe.com")
 #>   Title  Name    Domain BreachDate            AddedDate  PwnCount
 #> 1 Adobe Adobe adobe.com 2013-10-04 2013-12-04T00:00:00Z 152445165
-#>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Description
-#> 1 The big one. In October 2013, 153 million Adobe accounts were breached with each containing an internal ID, username, email, <em>encrypted</em> password and a password hint in plain text. The password cryptography was poorly done and <a href="http://stricture-group.com/files/adobe-top100.txt" target="_blank">many were quickly resolved back to plain text</a>. The unencrypted hints also <a href="http://www.troyhunt.com/2013/11/adobe-credentials-and-serious.html" target="_blank">disclosed much about the passwords</a> adding further to the risk that hundreds of millions of Adobe customers already faced.
+#>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Description
+#> 1 In October 2013, 153 million Adobe accounts were breached with each containing an internal ID, username, email, <em>encrypted</em> password and a password hint in plain text. The password cryptography was poorly done and <a href="http://stricture-group.com/files/adobe-top100.txt" target="_blank">many were quickly resolved back to plain text</a>. The unencrypted hints also <a href="http://www.troyhunt.com/2013/11/adobe-credentials-and-serious.html" target="_blank">disclosed much about the passwords</a> adding further to the risk that hundreds of millions of Adobe customers already faced.
 #>                                             DataClasses IsVerified
 #> 1 Email addresses, Password hints, Passwords, Usernames       TRUE
-#>   IsSensitive LogoType
-#> 1       FALSE      svg
+#>   IsSensitive IsActive IsRetired LogoType
+#> 1       FALSE     TRUE     FALSE      svg
 ```
 
 ``` r
 breached_site("Adobe")
 #>   Title  Name    Domain BreachDate            AddedDate  PwnCount
 #> 1 Adobe Adobe adobe.com 2013-10-04 2013-12-04T00:00:00Z 152445165
-#>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      Description
-#> 1 The big one. In October 2013, 153 million Adobe accounts were breached with each containing an internal ID, username, email, <em>encrypted</em> password and a password hint in plain text. The password cryptography was poorly done and <a href="http://stricture-group.com/files/adobe-top100.txt" target="_blank">many were quickly resolved back to plain text</a>. The unencrypted hints also <a href="http://www.troyhunt.com/2013/11/adobe-credentials-and-serious.html" target="_blank">disclosed much about the passwords</a> adding further to the risk that hundreds of millions of Adobe customers already faced.
+#>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         Description
+#> 1 In October 2013, 153 million Adobe accounts were breached with each containing an internal ID, username, email, <em>encrypted</em> password and a password hint in plain text. The password cryptography was poorly done and <a href="http://stricture-group.com/files/adobe-top100.txt" target="_blank">many were quickly resolved back to plain text</a>. The unencrypted hints also <a href="http://www.troyhunt.com/2013/11/adobe-credentials-and-serious.html" target="_blank">disclosed much about the passwords</a> adding further to the risk that hundreds of millions of Adobe customers already faced.
 #>                                             DataClasses IsVerified
 #> 1 Email addresses, Password hints, Passwords, Usernames       TRUE
-#>   IsSensitive LogoType
-#> 1       FALSE      svg
+#>   IsSensitive IsActive IsRetired LogoType
+#> 1       FALSE     TRUE     FALSE      svg
 ```
 
 ``` r
 data_classes()
 #>  [1] "Account balances"               "Age groups"                    
-#>  [3] "Avatars"                        "Career levels"                 
-#>  [5] "Credit cards"                   "Customer interactions"         
-#>  [7] "Dates of birth"                 "Device usage tracking data"    
-#>  [9] "Education levels"               "Email addresses"               
-#> [11] "Email messages"                 "Employers"                     
-#> [13] "Ethnicities"                    "Genders"                       
-#> [15] "Geographic location"            "Government issued IDs"         
-#> [17] "Historical passwords"           "Home addresses"                
-#> [19] "Homepage URLs"                  "Instant messenger identities"  
-#> [21] "IP addresses"                   "Job titles"                    
-#> [23] "MAC addresses"                  "Names"                         
-#> [25] "Nicknames"                      "Passport numbers"              
-#> [27] "Password hints"                 "Passwords"                     
-#> [29] "Payment histories"              "Phone numbers"                 
-#> [31] "Private messages"               "Purchases"                     
-#> [33] "Races"                          "Recovery email addresses"      
-#> [35] "Relationship statuses"          "Reward program balances"       
-#> [37] "Salutations"                    "Security questions and answers"
-#> [39] "Sexual preferences"             "SMS messages"                  
-#> [41] "Social connections"             "Spoken languages"              
-#> [43] "Time zones"                     "User agent details"            
-#> [45] "User website URLs"              "Usernames"                     
-#> [47] "Website activity"               "Years of birth"
+#>  [3] "Astrological signs"             "Avatars"                       
+#>  [5] "Bank account numbers"           "Banking PINs"                  
+#>  [7] "Beauty ratings"                 "Biometric data"                
+#>  [9] "Car ownership statuses"         "Career levels"                 
+#> [11] "Credit cards"                   "Customer feedback"             
+#> [13] "Customer interactions"          "Dates of birth"                
+#> [15] "Device usage tracking data"     "Drinking habits"               
+#> [17] "Drug habits"                    "Education levels"              
+#> [19] "Email addresses"                "Email messages"                
+#> [21] "Employers"                      "Ethnicities"                   
+#> [23] "Family members' names"          "Family plans"                  
+#> [25] "Financial transactions"         "Fitness levels"                
+#> [27] "Genders"                        "Geographic locations"          
+#> [29] "Government issued IDs"          "Historical passwords"          
+#> [31] "Home addresses"                 "Home ownership statuses"       
+#> [33] "Homepage URLs"                  "Income levels"                 
+#> [35] "Instant messenger identities"   "IP addresses"                  
+#> [37] "Job titles"                     "MAC addresses"                 
+#> [39] "Marital statuses"               "Names"                         
+#> [41] "Nicknames"                      "Parenting plans"               
+#> [43] "Passport numbers"               "Password hints"                
+#> [45] "Passwords"                      "Payment histories"             
+#> [47] "Personal descriptions"          "Personal interests"            
+#> [49] "Phone numbers"                  "Physical attributes"           
+#> [51] "Political views"                "Private messages"              
+#> [53] "Purchases"                      "Races"                         
+#> [55] "Recovery email addresses"       "Relationship statuses"         
+#> [57] "Religions"                      "Reward program balances"       
+#> [59] "Salutations"                    "Security questions and answers"
+#> [61] "Sexual fetishes"                "Sexual orientations"           
+#> [63] "Smoking habits"                 "SMS messages"                  
+#> [65] "Social connections"             "Spoken languages"              
+#> [67] "Time zones"                     "Travel habits"                 
+#> [69] "User agent details"             "User website URLs"             
+#> [71] "Usernames"                      "Website activity"              
+#> [73] "Work habits"                    "Years of birth"
 ```
 
 ``` r
@@ -92,6 +106,7 @@ pastes("foo@bar.com")
 #> 14 Pastebin                              C4GdBDnP
 #> 15 AdHocUrl http://siph0n.in/exploits.php?id=4364
 #> 16 AdHocUrl http://siph0n.in/exploits.php?id=1154
+#> 17 AdHocUrl http://siph0n.in/exploits.php?id=4737
 #>                                                          Title
 #> 1                                                         <NA>
 #> 2                                                      Twitter
@@ -109,6 +124,7 @@ pastes("foo@bar.com")
 #> 14                                          #secuinside13 logs
 #> 15                                                   siph0n.in
 #> 16                                                   siph0n.in
+#> 17                                   PayPalSucks Database 102k
 #>                    Date EmailCount
 #> 1  2016-01-25T16:54:32Z         22
 #> 2  2015-12-12T15:52:27Z         90
@@ -126,6 +142,7 @@ pastes("foo@bar.com")
 #> 14 2013-05-26T22:05:00Z        255
 #> 15                 <NA>      89270
 #> 16                 <NA>       1595
+#> 17                 <NA>      82071
 ```
 
 ------------------------------------------------------------------------
