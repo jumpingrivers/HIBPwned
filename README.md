@@ -2,7 +2,7 @@
 HIBPwned
 ========
 
-[![Travis-CI Build Status](https://travis-ci.org/censornet/HIBPwned.svg?branch=master)](https://travis-ci.org/censornet/HIBPwned) [![Coverage Status](https://img.shields.io/coveralls/censornet/HIBPwned.svg)](https://coveralls.io/r/censornet/HIBPwned?branch=master) [![Total CRAN downloads](http://cranlogs.r-pkg.org/badges/grand-total/HIBPwned.svg)](http://cranlogs.r-pkg.org/badges/grand-total/HIBPwned)
+[![Travis-CI Build Status](https://travis-ci.org/censornet/HIBPwned.svg?branch=master)](https://travis-ci.org/censornet/HIBPwned) [![Coverage Status](https://img.shields.io/coveralls/censornet/HIBPwned.svg)](https://coveralls.io/r/censornet/HIBPwned?branch=master) [![Total CRAN downloads](http://cranlogs.r-pkg.org/badges/grand-total/HIBPwned)](http://cranlogs.r-pkg.org/badges/grand-total/HIBPwned)
 
 Utilising the [HaveIBeenPwned.com API](https://haveibeenpwned.com/API/v2), check whether email addresses and/or user names have been present in a publicly disclosed data breach.
 
