@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 ```
 # HIBPwned
 [![Travis-CI Build Status](https://travis-ci.org/censornet/HIBPwned.svg?branch=master)](https://travis-ci.org/censornet/HIBPwned)
-[![Coverage Status](https://img.shields.io/coveralls/censornet/HIBPwned.svg)](https://coveralls.io/r/censornet/HIBPwned?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/censornet/HIBPwned/badge.svg?branch=master)](https://coveralls.io/github/censornet/HIBPwned?branch=master)
 [![Total CRAN downloads](http://cranlogs.r-pkg.org/badges/grand-total/HIBPwned)](http://cranlogs.r-pkg.org/badges/grand-total/HIBPwned)
 
 Utilising the [HaveIBeenPwned.com API](https://haveibeenpwned.com/API/v2), check whether email addresses and/or user names have been present in a publicly disclosed data breach.
