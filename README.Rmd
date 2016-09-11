@@ -20,6 +20,11 @@ knitr::opts_chunk$set(
 
 Utilising the [HaveIBeenPwned.com API](https://haveibeenpwned.com/API/v2), check whether email addresses and/or user names have been present in a publicly disclosed data breach.
 
+## News
+HaveIBeenPwned is now rate limited to one request per 1.5 seconds. To cope with this, the latest version includes a wait. As multiple statements might be called in quick succession, I made the decision to add the wait in to the beginning of each call to guarantee stable results.
+
+## Usage
+
 ```{r, results='hide', message=FALSE, warning=FALSE}
 if(!require("devtools")) install.packages("devtools")
 # Get or upgrade from github
