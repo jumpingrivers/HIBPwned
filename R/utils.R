@@ -3,7 +3,7 @@
 #' @param ... Pass through arguments
 #'
 #' @return data.frame
-GETcontent<-function(..., dontSleep=FALSE){
+GETcontent<-function(...){
   Sys.sleep(1.6)
   resp<-httr::GET(...)
   code<-httr::status_code(resp)
