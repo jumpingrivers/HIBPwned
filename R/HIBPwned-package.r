@@ -5,7 +5,4 @@
 #'
 #' @name HIBPwned
 #' @docType package
-#' @importFrom httr add_headers content
-#' @importFrom urltools url_encode
-#' @importFrom jsonlite fromJSON
 NULL
