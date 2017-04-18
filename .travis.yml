@@ -1,8 +1,10 @@
 language: r
 warnings_are_errors: true
 cache: packages
-apt_packages:
-  - openssl-dev
+addons:
+  apt:
+    packages:
+      - openssl-dev
 r_packages:
   - covr
 after_success:
