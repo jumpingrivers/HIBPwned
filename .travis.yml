@@ -4,7 +4,7 @@ cache: packages
 addons:
   apt:
     packages:
-      - openssl-dev
+      - libcurl4-openssl-dev
 r_packages:
   - covr
 after_success:
