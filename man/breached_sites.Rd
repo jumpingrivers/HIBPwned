@@ -20,4 +20,3 @@ Get all (nonsensitive) breached sites in HIBP
 \examples{
 breached_sites()
 }
-

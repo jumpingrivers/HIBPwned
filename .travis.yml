@@ -3,7 +3,5 @@ warnings_are_errors: true
 cache: packages
 r_packages:
   - covr
-r_github_packages:
-  - tarakc02/ratelimitr
 after_success:
   - Rscript -e 'covr::coveralls()'

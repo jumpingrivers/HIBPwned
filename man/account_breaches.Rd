@@ -24,4 +24,3 @@ Search for data breaches associated with one or more accounts.
 \examples{
 account_breaches(c("steff.sullivan@gmail.com","stephanie.g.locke@gmail.com"))
 }
-

@@ -22,4 +22,3 @@ a paste
 \examples{
 pastes(c("steff.sullivan@gmail.com","stephanie.g.locke@gmail.com"))
 }
-

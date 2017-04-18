@@ -20,4 +20,3 @@ Construct headers for a HIBP request.
 \examples{
 HIBP_headers()
 }
-

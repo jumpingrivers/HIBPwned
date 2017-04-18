@@ -15,4 +15,3 @@ data.frame
 \description{
 Used to extract content from a GET request and collapse to a data.frame
 }
-

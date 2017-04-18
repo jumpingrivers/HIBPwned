@@ -1,6 +1,6 @@
 Package: HIBPwned
 Title: Bindings for the 'HaveIBeenPwned.com' Data Breach API
-Version: 0.1.4
+Version: 0.1.5
 Authors@R: c(person("Steph", "Locke"
              , email = "stephanie.g.locke@gmail.com"
              , role = c("aut", "cre"))
@@ -25,7 +25,7 @@ Imports:
     urltools,
     jsonlite,
     ratelimitr
-RoxygenNote: 5.0.1
+RoxygenNote: 6.0.1
 VignetteBuilder: knitr
 URL: https://github.com/censornet/HIBPwned
 BugReports: https://github.com/censornet/HIBPwned/issues
