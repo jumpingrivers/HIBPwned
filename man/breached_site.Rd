@@ -20,4 +20,3 @@ Get a specific breached site, based in breach name (not domain)
 \examples{
 breached_site("Adobe")
 }
-

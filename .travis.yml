@@ -1,7 +1,12 @@
 language: r
 warnings_are_errors: true
 cache: packages
+addons:
+  apt:
+    packages:
+      - libssl1.0.0
 r_packages:
   - covr
 after_success:
   - Rscript -e 'covr::coveralls()'
+  
