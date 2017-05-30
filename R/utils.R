@@ -15,5 +15,5 @@ GETcontent<-function(...){
 
 get <- ratelimitr::limit_rate(
   httr::GET,
-  ratelimitr::rate(n = 1, period = 1.5)
+  ratelimitr::rate(n = 1, period = 1.6)
 )

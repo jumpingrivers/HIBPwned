@@ -1,1 +1,1 @@
-No new functionality, just moved to a better rate limiting methodology
+Upping delay in rate limit so package passes tests reliably again
