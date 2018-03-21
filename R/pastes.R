@@ -5,6 +5,10 @@
 #' @param ... Optional passthrough to HIBP_headers()
 #'
 #' @return List of data.frames containing results
+#' @details According to the API docs
+#' (\url{https://haveibeenpwned.com/FAQs#Pastes}),
+#' "A "paste" is information that has been "pasted" to a publicly facing website
+#'  designed to share content such as Pastebin."
 #' @export
 #'
 #' @examples

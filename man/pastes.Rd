@@ -19,6 +19,12 @@ List of data.frames containing results
 Search for cases where an email address has been included in
 a paste
 }
+\details{
+According to the API docs
+(\url{https://haveibeenpwned.com/FAQs#Pastes}),
+"A "paste" is information that has been "pasted" to a publicly facing website
+ designed to share content such as Pastebin."
+}
 \examples{
 pastes(c("steff.sullivan@gmail.com","stephanie.g.locke@gmail.com"))
 }
