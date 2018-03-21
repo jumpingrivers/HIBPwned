@@ -8,10 +8,10 @@ GETcontent <- function(...) {# nolint
   output <- get_and_retry(...)
   try_number <- 1
   while (is.null(output) && try_number < 6) {
-    message(paste0("Server returned nothing, trying again, try number ", try_number))# nolint
+    try_number <- try_number + 1
+    message(paste0("Try number ", try_number))
     Sys.sleep(2 ^ try_number)
     output <- get_and_retry(...)
-    try_number <- try_number + 1
   }
   return(output)
 }
