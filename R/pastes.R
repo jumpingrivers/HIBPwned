@@ -9,19 +9,19 @@
 #'
 #' @examples
 #' pastes(c("steff.sullivan@gmail.com","stephanie.g.locke@gmail.com"))
-pastes<-function(
-   emails
-  ,...){
+pastes <- function(
+                   emails
+                   , ...) {
+  if (length(emails) == 0 | !inherits(emails, "character")) stop("Problematic emails")
 
-  if(length(emails)==0|!inherits(emails,"character")) stop("Problematic emails")
+  encoded <- urltools::url_encode(emails)
+  URLS <- paste0(
+    "https://haveibeenpwned.com/api/pasteaccount/"
+    , encoded
+  )
 
-  encoded<-urltools::url_encode(emails)
-  URLS<-paste0("https://haveibeenpwned.com/api/pasteaccount/"
-               ,encoded)
-
-  res<-lapply(URLS, GETcontent, HIBP_headers(...))
-  names(res)<-emails
+  res <- lapply(URLS, GETcontent, HIBP_headers(...))
+  names(res) <- emails
 
   return(res)
-
 }

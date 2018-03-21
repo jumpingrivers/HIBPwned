@@ -8,10 +8,10 @@
 #'
 #' @examples
 #' HIBP_headers()
-HIBP_headers<-function(agent="HIBPwned R pkg"){
-  if(length(agent)!=1|!inherits(agent,"character")) stop("Problematic agent")
+HIBP_headers <- function(agent="HIBPwned R pkg") {
+  if (length(agent) != 1 | !inherits(agent, "character")) stop("Problematic agent")
   httr::add_headers(
-     `api-version` = 2
-    ,`User-Agent` = agent
+    `api-version` = 2
+    , `User-Agent` = agent
   )
 }

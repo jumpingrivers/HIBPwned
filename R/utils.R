@@ -3,13 +3,15 @@
 #' @param ... Pass through arguments
 #'
 #' @return data.frame
-GETcontent<-function(...){
-  resp<-get(...)
-  code<-httr::status_code(resp)
-  content<-httr::content(resp ,as="text"
-                         ,encoding="utf-8")
-  if(code >200) res<-data.frame(name=NA)
-  if(code==200) res<-jsonlite::fromJSON(content)
+GETcontent <- function(...) {
+  resp <- get(...)
+  code <- httr::status_code(resp)
+  content <- httr::content(
+    resp, as = "text"
+    , encoding = "utf-8"
+  )
+  if (code > 200) res <- data.frame(name = NA)
+  if (code == 200) res <- jsonlite::fromJSON(content)
   return(res)
 }
 
