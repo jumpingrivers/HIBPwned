@@ -4,7 +4,7 @@ cache: packages
 
 env:
   global:
-    - R_CHECK_ARGS="--no-manual"
+    - R_CHECK_ARGS="--no-manual --as-cran"
 
 matrix:
   include:
