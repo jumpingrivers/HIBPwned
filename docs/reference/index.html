@@ -23,8 +23,6 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -56,25 +54,10 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="..//index.html">
-    <span class="fa fa-home fa-lg"></span>
-     
-  </a>
-</li>
-<li>
   <a href="../reference/index.html">Reference</a>
 </li>
-<li class="dropdown">
-  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-    Articles
-     
-    <span class="caret"></span>
-  </a>
-  <ul class="dropdown-menu" role="menu">
-    <li>
-      <a href="../articles/HIBP.html">Have I Been Pwned? API</a>
-    </li>
-  </ul>
+<li>
+  <a href="../articles/index.html">Articles</a>
 </li>
 <li>
   <a href="../news/index.html">News</a>
@@ -116,7 +99,7 @@
       <tbody>
         <tr>
           <th colspan="2">
-            <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
+            <h2 id="section-find-breaches-and-pastes-for-an-email-account" class="hasAnchor"><a href="#section-find-breaches-and-pastes-for-an-email-account" class="anchor"></a>Find breaches and pastes for an email account</h2>
             <p class="section-desc"></p>
           </th>
         </tr>
@@ -129,16 +112,19 @@
         </tr><tr>
           <!--  -->
           <td>
-            <p><code><a href="breached_site.html">breached_site</a></code> </p>
+            <p><code><a href="pastes.html">pastes</a></code> </p>
           </td>
-          <td><p>Get a specific breached site, based in breach name (not domain)</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="breached_sites.html">breached_sites</a></code> </p>
-          </td>
-          <td><p>Get all (nonsensitive) breached sites in HIBP</p></td>
-        </tr><tr>
+          <td><p>Search for cases where an email address has been included in
+a paste</p></td>
+        </tr>
+      </tbody><tbody>
+        <tr>
+          <th colspan="2">
+            <h2 id="section-find-metadata-about-breaches" class="hasAnchor"><a href="#section-find-metadata-about-breaches" class="anchor"></a>Find metadata about breaches</h2>
+            <p class="section-desc"></p>
+          </th>
+        </tr>
+        <tr>
           <!--  -->
           <td>
             <p><code><a href="data_classes.html">data_classes</a></code> </p>
@@ -148,10 +134,24 @@ exposed in breaches</p></td>
         </tr><tr>
           <!--  -->
           <td>
-            <p><code><a href="GETcontent.html">GETcontent</a></code> </p>
+            <p><code><a href="breached_sites.html">breached_sites</a></code> </p>
           </td>
-          <td><p>Used to extract content from a GET request and collapse to a data.frame</p></td>
+          <td><p>Get all (nonsensitive) breached sites in HIBP</p></td>
         </tr><tr>
+          <!--  -->
+          <td>
+            <p><code><a href="breached_site.html">breached_site</a></code> </p>
+          </td>
+          <td><p>Get a specific breached site, based in breach name (not domain)</p></td>
+        </tr>
+      </tbody><tbody>
+        <tr>
+          <th colspan="2">
+            <h2 id="section-utils" class="hasAnchor"><a href="#section-utils" class="anchor"></a>Utils</h2>
+            <p class="section-desc"></p>
+          </th>
+        </tr>
+        <tr>
           <!--  -->
           <td>
             <p><code><a href="HIBP_headers.html">HIBP_headers</a></code> </p>
@@ -161,16 +161,9 @@ exposed in breaches</p></td>
         </tr><tr>
           <!--  -->
           <td>
-            <p></p>
+            <p><code><a href="GETcontent.html">GETcontent</a></code> </p>
           </td>
-          <td><p>HIBPwned</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="pastes.html">pastes</a></code> </p>
-          </td>
-          <td><p>Search for cases where an email address has been included in
-a paste</p></td>
+          <td><p>Used to extract content from a GET request and collapse to a data.frame</p></td>
         </tr>
       </tbody>
       </table>
@@ -180,7 +173,9 @@ a paste</p></td>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
     <ul class="nav nav-pills nav-stacked">
-      <li><a href="#section-all-functions">All functions</a></li>
+      <li><a href="#section-find-breaches-and-pastes-for-an-email-account">Find breaches and pastes for an email account</a></li>
+      <li><a href="#section-find-metadata-about-breaches">Find metadata about breaches</a></li>
+      <li><a href="#section-utils">Utils</a></li>
     </ul>
   </div>
 </div>
