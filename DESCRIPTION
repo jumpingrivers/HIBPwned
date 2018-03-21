@@ -16,10 +16,11 @@ Depends:
     R (>= 3.2.3)
 License: MIT + file LICENSE
 LazyData: true
-Suggests:
+Suggests: 
     testthat,
     knitr,
-    rmarkdown
+    rmarkdown,
+    lintr
 Imports:
     httr,
     urltools,
