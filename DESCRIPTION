@@ -25,7 +25,7 @@ Imports:
     urltools,
     jsonlite,
     ratelimitr
-RoxygenNote: 6.0.1
+RoxygenNote: 6.0.1.9000
 VignetteBuilder: knitr
 URL: https://github.com/stephlocke/HIBPwned
 BugReports: https://github.com/stephlocke/HIBPwned/issues
