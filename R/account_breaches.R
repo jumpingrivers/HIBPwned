@@ -30,17 +30,17 @@ account_breaches <- function(
   }
 
   encoded <- urltools::url_encode(accounts)
-  URLS <- paste0(
+  urls <- paste0(
     "https://haveibeenpwned.com/api/breachedaccount/"
     , encoded
   )
 
-  if (truncate) URLS <- urltools::param_set(URLS, "truncateResponse", "true")
+  if (truncate) urls <- urltools::param_set(urls, "truncateResponse", "true")
   if (!is.null(domain)){
-    URLS <- urltools::param_set(URLS, "domain", urltools::url_encode(domain))
+    urls <- urltools::param_set(urls, "domain", urltools::url_encode(domain))
   }
 
-  res <- lapply(URLS, GETcontent, HIBP_headers(...))
+  res <- lapply(urls, GETcontent, HIBP_headers(...))
   names(res) <- accounts
 
   return(res)

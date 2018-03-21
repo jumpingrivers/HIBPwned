@@ -3,7 +3,7 @@
 #' @param ... Pass through arguments
 #'
 #' @return data.frame
-GETcontent <- function(...) {
+GETcontent <- function(...) {# nolint
   resp <- get(...)
   code <- httr::status_code(resp)
   content <- httr::content(

@@ -17,12 +17,12 @@ pastes <- function(
   }
 
   encoded <- urltools::url_encode(emails)
-  URLS <- paste0(
+  urls <- paste0(
     "https://haveibeenpwned.com/api/pasteaccount/"
     , encoded
   )
 
-  res <- lapply(URLS, GETcontent, HIBP_headers(...))
+  res <- lapply(urls, GETcontent, HIBP_headers(...))
   names(res) <- emails
 
   return(res)

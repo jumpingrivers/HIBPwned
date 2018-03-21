@@ -8,7 +8,7 @@
 #'
 #' @examples
 #' HIBP_headers()
-HIBP_headers <- function(agent="HIBPwned R pkg") {
+HIBP_headers <- function(agent="HIBPwned R pkg") {# nolint
   if (length(agent) != 1 | !inherits(agent, "character")){
     stop("Problematic agent")
   }

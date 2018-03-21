@@ -13,10 +13,10 @@ breached_site <- function(name, ...) {
     stop("Problematic breach name")
   }
 
-  URLS <- "https://haveibeenpwned.com/api/breach/"
+  urls <- "https://haveibeenpwned.com/api/breach/"
   encoded <- urltools::url_encode(name)
-  URLS <- paste0(URLS, encoded)
-  res <- GETcontent(URLS, HIBP_headers(...))
+  urls <- paste0(urls, encoded)
+  res <- GETcontent(urls, HIBP_headers(...))
   if (length(res) == 1) {
     res <- list(
       Title = NA, Name = name, Domain = NA,
@@ -26,7 +26,7 @@ breached_site <- function(name, ...) {
     )
   }
 
-  res$DataClasses <- paste(res$DataClasses, sep = ", ", collapse = ", ")
+  res$DataClasses <- paste(res$DataClasses, sep = ", ", collapse = ", ")# nolint
   res <- data.frame(res)
 
   return(res)

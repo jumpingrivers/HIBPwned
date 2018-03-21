@@ -9,7 +9,7 @@
 #' @examples
 #' data_classes()
 data_classes <- function(...) {
-  URLS <- "https://haveibeenpwned.com/api/dataclasses"
-  res <- GETcontent(URLS, HIBP_headers(...))
+  urls <- "https://haveibeenpwned.com/api/dataclasses"
+  res <- GETcontent(urls, HIBP_headers(...))
   return(res)
 }
