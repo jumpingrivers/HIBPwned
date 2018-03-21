@@ -12,7 +12,9 @@
 pastes <- function(
                    emails
                    , ...) {
-  if (length(emails) == 0 | !inherits(emails, "character")) stop("Problematic emails")
+  if (length(emails) == 0 | !inherits(emails, "character")){
+    stop("Problematic emails")
+  }
 
   encoded <- urltools::url_encode(emails)
   URLS <- paste0(

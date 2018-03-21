@@ -17,7 +17,8 @@ test_that("headers are constructed correctly", {
   # Expected population
   expect_true(length(res$headers) == 2)
   expect_named(res$headers, c("api-version", "User-Agent"))
-  expect_equal(res$headers, c(`api-version` = "2", `User-Agent` = "HIBPwned R pkg"))
+  expect_equal(res$headers,
+               c(`api-version` = "2", `User-Agent` = "HIBPwned R pkg"))
 })
 
 test_that("alternative agents work", {

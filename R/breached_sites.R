@@ -14,7 +14,9 @@ breached_sites <- function(domain=NULL, ...) {
     stop("Problematic domain")
   }
   URLS <- "https://haveibeenpwned.com/api/breaches"
-  if (!is.null(domain)) URLS <- urltools::param_set(URLS, "domain", urltools::url_encode(domain))
+  if (!is.null(domain)){
+    URLS <- urltools::param_set(URLS, "domain", urltools::url_encode(domain))
+  }
 
   res <- GETcontent(URLS, HIBP_headers(...))
   if (identical(res, list())) {

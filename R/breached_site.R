@@ -9,7 +9,10 @@
 #' @examples
 #' breached_site("Adobe")
 breached_site <- function(name, ...) {
-  if (is.null(name) | length(name) != 1 | !inherits(name, "character")) stop("Problematic breach name")
+  if (is.null(name) | length(name) != 1 | !inherits(name, "character")){
+    stop("Problematic breach name")
+  }
+
   URLS <- "https://haveibeenpwned.com/api/breach/"
   encoded <- urltools::url_encode(name)
   URLS <- paste0(URLS, encoded)
