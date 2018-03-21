@@ -9,7 +9,8 @@ account_breaches(accounts, truncate = FALSE, domain = NULL, ...)
 \arguments{
 \item{accounts}{A character vector of email addresses or account names}
 
-\item{truncate}{Whether responses should be trimmed to just name of breached site}
+\item{truncate}{Whether responses should be trimmed to just name of
+breached site}
 
 \item{domain}{Search a specific domain}
 

@@ -18,7 +18,7 @@ breached_sites <- function(domain=NULL, ...) {
     urls <- urltools::param_set(urls, "domain", urltools::url_encode(domain))
   }
 
-  res <- GETcontent(urls, HIBP_headers(...))
+  res <- GETcontent(urls, HIBP_headers(...))# nolint
   if (identical(res, list())) {
     res <- data.frame(
       Title = NA, Name = NA, Domain = domain,

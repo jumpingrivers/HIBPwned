@@ -22,7 +22,7 @@ pastes <- function(
     , encoded
   )
 
-  res <- lapply(urls, GETcontent, HIBP_headers(...))
+  res <- lapply(urls, GETcontent, HIBP_headers(...))# nolint
   names(res) <- emails
 
   return(res)

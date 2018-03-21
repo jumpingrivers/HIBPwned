@@ -16,6 +16,7 @@ account_breaches <- function(
                              , truncate=FALSE
                              , domain=NULL
                              , ...) {
+
   if (length(accounts) == 0 | !inherits(accounts, "character")){
     stop("Problematic accounts")
   }
@@ -40,7 +41,7 @@ account_breaches <- function(
     urls <- urltools::param_set(urls, "domain", urltools::url_encode(domain))
   }
 
-  res <- lapply(urls, GETcontent, HIBP_headers(...))
+  res <- lapply(urls, GETcontent, HIBP_headers(...))# nolint
   names(res) <- accounts
 
   return(res)
