@@ -4,7 +4,8 @@
 \alias{account_breaches}
 \title{Search for data breaches associated with one or more accounts.}
 \usage{
-account_breaches(accounts, truncate = FALSE, domain = NULL, ...)
+account_breaches(accounts, truncate = FALSE, domain = NULL,
+  as_list = TRUE, ...)
 }
 \arguments{
 \item{accounts}{A character vector of email addresses or account names}
@@ -13,6 +14,8 @@ account_breaches(accounts, truncate = FALSE, domain = NULL, ...)
 breached site}
 
 \item{domain}{Search a specific domain}
+
+\item{as_list}{whether to return results as a list (default, TRUE) or a data.frame}
 
 \item{...}{Optional passthrough to HIBP_headers()}
 }

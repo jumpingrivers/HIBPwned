@@ -4,6 +4,7 @@
 #' @param truncate Whether responses should be trimmed to just name of
 #' breached site
 #' @param domain Search a specific domain
+#' @param as_list whether to return results as a list (default, TRUE) or a data.frame
 #' @param ... Optional passthrough to HIBP_headers()
 #'
 #' @return List of data.frames containing results
@@ -15,7 +16,7 @@ account_breaches <- function(
                              accounts
                              , truncate=FALSE
                              , domain=NULL
-                             , ...) {
+                             , as_list = TRUE, ...) {
 
   if (length(accounts) == 0 | !inherits(accounts, "character")){
     stop("Problematic accounts")
@@ -43,6 +44,16 @@ account_breaches <- function(
 
   res <- lapply(URLS, GETcontent, HIBP_headers(...))# nolint
   names(res) <- accounts
+  if (!as_list){
+    # bind the list and keep the account as a column
+    account <- rep.int(accounts, times = lapply(res, nrow))
+    if (length(res) > 1){
+      res <- do.call("rbind", res)
 
+    }else{
+      res <- res[[1]]
+    }
+    res$account <- account
+  }
   return(res)
 }

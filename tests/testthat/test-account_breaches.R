@@ -48,7 +48,7 @@ test_that("account_breaches works for multiple accounts", {
   acct <- c("steff.sullivan@gmail.com", "stephanie.g.locke@gmail.com")
 
   # Simplest usage scenario
-  res <- account_breaches(acct)
+  res <- account_breaches(acct, as_list = TRUE)
 
   expect_is(res, "list")
   expect_named(res, acct)
@@ -120,4 +120,17 @@ test_that("handles incorrect values", {
   expect_error(account_breaches(acct, domain = TRUE), curerror)
   expect_error(account_breaches(acct, domain = rep(acct, 2)), curerror)
   expect_error(account_breaches(acct, domain = as.character(c())), curerror)
+})
+
+test_that("account_breaches can return a single data.frame", {
+  res <- account_breaches("steff.sullivan@gmail.com", as_list = FALSE)
+  expect_is(res, "data.frame")
+  expect_true("account" %in% names(res))
+
+  acct <- c("steff.sullivan@gmail.com", "stephanie.g.locke@gmail.com")
+
+  res <- account_breaches(acct, as_list = FALSE)
+  expect_is(res, "data.frame")
+  expect_true("account" %in% names(res))
+
 })
