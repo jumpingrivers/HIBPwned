@@ -13,10 +13,10 @@ breached_site <- function(name, ...) {
     stop("Problematic breach name")
   }
 
-  urls <- "https://haveibeenpwned.com/api/breach/"
+  URLS <- "https://haveibeenpwned.com/api/breach/" # nolint
   encoded <- urltools::url_encode(name)
-  urls <- paste0(urls, encoded)
-  res <- GETcontent(urls, HIBP_headers(...))# nolint
+  URLS <- paste0(URLS, encoded) # nolint
+  res <- GETcontent(URLS, HIBP_headers(...))# nolint
   if (length(res) == 1) {
     res <- list(
       Title = NA, Name = name, Domain = NA,

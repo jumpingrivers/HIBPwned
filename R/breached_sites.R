@@ -13,12 +13,12 @@ breached_sites <- function(domain=NULL, ...) {
     length(domain) != 1 | !inherits(domain, "character"))) {
     stop("Problematic domain")
   }
-  urls <- "https://haveibeenpwned.com/api/breaches"
+  URLS <- "https://haveibeenpwned.com/api/breaches" # nolint
   if (!is.null(domain)){
-    urls <- urltools::param_set(urls, "domain", urltools::url_encode(domain))
+    URLS <- urltools::param_set(URLS, "domain", urltools::url_encode(domain)) # nolint
   }
 
-  res <- GETcontent(urls, HIBP_headers(...))# nolint
+  res <- GETcontent(URLS, HIBP_headers(...))# nolint
   if (identical(res, list())) {
     res <- data.frame(
       Title = NA, Name = NA, Domain = domain,
