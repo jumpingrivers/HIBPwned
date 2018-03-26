@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Get list of classes of data that have been
-exposed in breaches — data_classes â€¢ HIBPwned</title>
+exposed in breaches â€” data_classes â€¢ HIBPwned</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -24,8 +24,6 @@ exposed in breaches — data_classes â€¢ HIBPwned</title>
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -57,7 +55,7 @@ exposed in breaches — data_classes â€¢ HIBPwned</title>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="..//index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -78,7 +76,7 @@ exposed in breaches — data_classes â€¢ HIBPwned</title>
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -102,6 +100,7 @@ exposed in breaches — data_classes â€¢ HIBPwned</title>
     <div class="page-header">
     <h1>Get list of classes of data that have been
 exposed in breaches</h1>
+    <small>Source: <a href='https://github.com/stephlocke/HIBPwned/blob/master/R/data_classes.R'><code>R/data_classes.R</code></a></small>
     </div>
 
     
@@ -111,7 +110,7 @@ exposed in breaches</p>
 
     <pre class="usage"><span class='fu'>data_classes</span>(<span class='no'>...</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
@@ -126,55 +125,61 @@ exposed in breaches</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>data_classes</span>()</div><div class='output co'>#&gt;  [1] "Account balances"                 "Age groups"                      
-#&gt;  [3] "Astrological signs"               "Auth tokens"                     
-#&gt;  [5] "Avatars"                          "Bank account numbers"            
-#&gt;  [7] "Banking PINs"                     "Beauty ratings"                  
-#&gt;  [9] "Biometric data"                   "Browser user agent details"      
-#&gt; [11] "Buying preferences"               "Car ownership statuses"          
-#&gt; [13] "Career levels"                    "Charitable donations"            
-#&gt; [15] "Chat logs"                        "Credit card CVV"                 
-#&gt; [17] "Credit cards"                     "Credit status information"       
-#&gt; [19] "Customer feedback"                "Customer interactions"           
-#&gt; [21] "Dates of birth"                   "Deceased date"                   
-#&gt; [23] "Device information"               "Device usage tracking data"      
-#&gt; [25] "Drinking habits"                  "Drug habits"                     
-#&gt; [27] "Education levels"                 "Email addresses"                 
-#&gt; [29] "Email messages"                   "Employers"                       
-#&gt; [31] "Ethnicities"                      "Family members' names"           
-#&gt; [33] "Family plans"                     "Family structure"                
-#&gt; [35] "Financial investments"            "Financial transactions"          
-#&gt; [37] "Fitness levels"                   "Genders"                         
-#&gt; [39] "Geographic locations"             "Government issued IDs"           
-#&gt; [41] "Health insurance information"     "Historical passwords"            
-#&gt; [43] "Home ownership statuses"          "Homepage URLs"                   
-#&gt; [45] "Income levels"                    "Instant messenger identities"    
-#&gt; [47] "IP addresses"                     "Job titles"                      
-#&gt; [49] "MAC addresses"                    "Marital statuses"                
-#&gt; [51] "Names"                            "Net worths"                      
-#&gt; [53] "Nicknames"                        "Parenting plans"                 
-#&gt; [55] "Partial credit card data"         "Passport numbers"                
-#&gt; [57] "Password hints"                   "Passwords"                       
-#&gt; [59] "Payment histories"                "Payment methods"                 
-#&gt; [61] "Personal descriptions"            "Personal health data"            
-#&gt; [63] "Personal interests"               "Phone numbers"                   
-#&gt; [65] "Physical addresses"               "Physical attributes"             
-#&gt; [67] "Political donations"              "Political views"                 
-#&gt; [69] "Private messages"                 "Professional skills"             
-#&gt; [71] "Purchases"                        "Purchasing habits"               
-#&gt; [73] "Races"                            "Recovery email addresses"        
-#&gt; [75] "Relationship statuses"            "Religions"                       
-#&gt; [77] "Reward program balances"          "Salutations"                     
-#&gt; [79] "Security questions and answers"   "Sexual fetishes"                 
-#&gt; [81] "Sexual orientations"              "Smoking habits"                  
-#&gt; [83] "SMS messages"                     "Social connections"              
-#&gt; [85] "Spoken languages"                 "Survey results"                  
-#&gt; [87] "Time zones"                       "Travel habits"                   
-#&gt; [89] "User statuses"                    "User website URLs"               
-#&gt; [91] "Usernames"                        "Utility bills"                   
-#&gt; [93] "Vehicle details"                  "Website activity"                
-#&gt; [95] "Work habits"                      "Years of birth"                  
-#&gt; [97] "Years of professional experience"</div></pre>
+    <pre class="examples"><div class='input'><span class='fu'>data_classes</span>()</div><div class='output co'>#&gt;   [1] "Account balances"                 "Address book contacts"           
+#&gt;   [3] "Age groups"                       "Ages"                            
+#&gt;   [5] "Apps installed on devices"        "Astrological signs"              
+#&gt;   [7] "Auth tokens"                      "Avatars"                         
+#&gt;   [9] "Bank account numbers"             "Banking PINs"                    
+#&gt;  [11] "Beauty ratings"                   "Biometric data"                  
+#&gt;  [13] "Browser user agent details"       "Buying preferences"              
+#&gt;  [15] "Car ownership statuses"           "Career levels"                   
+#&gt;  [17] "Cellular network names"           "Charitable donations"            
+#&gt;  [19] "Chat logs"                        "Credit card CVV"                 
+#&gt;  [21] "Credit cards"                     "Credit status information"       
+#&gt;  [23] "Customer feedback"                "Customer interactions"           
+#&gt;  [25] "Dates of birth"                   "Deceased date"                   
+#&gt;  [27] "Deceased statuses"                "Device information"              
+#&gt;  [29] "Device usage tracking data"       "Drinking habits"                 
+#&gt;  [31] "Drug habits"                      "Eating habits"                   
+#&gt;  [33] "Education levels"                 "Email addresses"                 
+#&gt;  [35] "Email messages"                   "Employers"                       
+#&gt;  [37] "Ethnicities"                      "Family members' names"           
+#&gt;  [39] "Family plans"                     "Family structure"                
+#&gt;  [41] "Financial investments"            "Financial transactions"          
+#&gt;  [43] "Fitness levels"                   "Genders"                         
+#&gt;  [45] "Geographic locations"             "Government issued IDs"           
+#&gt;  [47] "Health insurance information"     "Historical passwords"            
+#&gt;  [49] "Home ownership statuses"          "Homepage URLs"                   
+#&gt;  [51] "IMEI numbers"                     "IMSI numbers"                    
+#&gt;  [53] "Income levels"                    "Instant messenger identities"    
+#&gt;  [55] "IP addresses"                     "Job titles"                      
+#&gt;  [57] "MAC addresses"                    "Marital statuses"                
+#&gt;  [59] "Names"                            "Nationalities"                   
+#&gt;  [61] "Net worths"                       "Nicknames"                       
+#&gt;  [63] "Parenting plans"                  "Partial credit card data"        
+#&gt;  [65] "Passport numbers"                 "Password hints"                  
+#&gt;  [67] "Passwords"                        "Payment histories"               
+#&gt;  [69] "Payment methods"                  "Personal descriptions"           
+#&gt;  [71] "Personal health data"             "Personal interests"              
+#&gt;  [73] "Phone numbers"                    "Physical addresses"              
+#&gt;  [75] "Physical attributes"              "Political donations"             
+#&gt;  [77] "Political views"                  "Private messages"                
+#&gt;  [79] "Professional skills"              "Profile photos"                  
+#&gt;  [81] "Purchases"                        "Purchasing habits"               
+#&gt;  [83] "Races"                            "Recovery email addresses"        
+#&gt;  [85] "Relationship statuses"            "Religions"                       
+#&gt;  [87] "Reward program balances"          "Salutations"                     
+#&gt;  [89] "School grades (class levels)"     "Security questions and answers"  
+#&gt;  [91] "Sexual fetishes"                  "Sexual orientations"             
+#&gt;  [93] "Smoking habits"                   "SMS messages"                    
+#&gt;  [95] "Social connections"               "Social media profiles"           
+#&gt;  [97] "Spoken languages"                 "Support tickets"                 
+#&gt;  [99] "Survey results"                   "Time zones"                      
+#&gt; [101] "Travel habits"                    "User statuses"                   
+#&gt; [103] "User website URLs"                "Usernames"                       
+#&gt; [105] "Utility bills"                    "Vehicle details"                 
+#&gt; [107] "Website activity"                 "Work habits"                     
+#&gt; [109] "Years of birth"                   "Years of professional experience"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -191,7 +196,7 @@ exposed in breaches</p>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Steph Locke, Troy Hunt.</p>
+  <p>Developed by Steph Locke, Troy Hunt, Locke Data.</p>
 </div>
 
 <div class="pkgdown">
@@ -203,3 +208,4 @@ exposed in breaches</p>
 
   </body>
 </html>
+

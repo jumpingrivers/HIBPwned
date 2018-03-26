@@ -54,13 +54,28 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
+  <a href="../index.html">
+    <span class="fa fa-home fa-lg"></span>
+     
+  </a>
+</li>
+<li>
   <a href="../reference/index.html">Reference</a>
 </li>
-<li>
-  <a href="../articles/index.html">Articles</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Articles
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="../articles/HIBP.html">Have I Been Pwned? API</a>
+    </li>
+  </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -82,10 +97,7 @@
       <div class="row">
   <div class="col-md-9">
     <div class="page-header">
-      <h1>
-        Reference
-        <small>version&nbsp;0.1.6</small>
-      </h1>
+      <h1>Reference</h1>
     </div>
 
     <div class="contents">
@@ -106,13 +118,13 @@
         <tr>
           <!--  -->
           <td>
-            <p><code><a href="account_breaches.html">account_breaches</a></code> </p>
+            <p><code><a href="account_breaches.html">account_breaches()</a></code> </p>
           </td>
           <td><p>Search for data breaches associated with one or more accounts.</p></td>
         </tr><tr>
           <!--  -->
           <td>
-            <p><code><a href="pastes.html">pastes</a></code> </p>
+            <p><code><a href="pastes.html">pastes()</a></code> </p>
           </td>
           <td><p>Search for cases where an email address has been included in
 a paste</p></td>
@@ -127,20 +139,20 @@ a paste</p></td>
         <tr>
           <!--  -->
           <td>
-            <p><code><a href="data_classes.html">data_classes</a></code> </p>
+            <p><code><a href="data_classes.html">data_classes()</a></code> </p>
           </td>
           <td><p>Get list of classes of data that have been
 exposed in breaches</p></td>
         </tr><tr>
           <!--  -->
           <td>
-            <p><code><a href="breached_sites.html">breached_sites</a></code> </p>
+            <p><code><a href="breached_sites.html">breached_sites()</a></code> </p>
           </td>
           <td><p>Get all (nonsensitive) breached sites in HIBP</p></td>
         </tr><tr>
           <!--  -->
           <td>
-            <p><code><a href="breached_site.html">breached_site</a></code> </p>
+            <p><code><a href="breached_site.html">breached_site()</a></code> </p>
           </td>
           <td><p>Get a specific breached site, based in breach name (not domain)</p></td>
         </tr>
@@ -154,14 +166,14 @@ exposed in breaches</p></td>
         <tr>
           <!--  -->
           <td>
-            <p><code><a href="HIBP_headers.html">HIBP_headers</a></code> </p>
+            <p><code><a href="HIBP_headers.html">HIBP_headers()</a></code> </p>
           </td>
           <td><p>Construct headers for a HIBP request.
 [Optional] Change the agent to make the request bespoke to you.</p></td>
         </tr><tr>
           <!--  -->
           <td>
-            <p><code><a href="GETcontent.html">GETcontent</a></code> </p>
+            <p><code><a href="GETcontent.html">GETcontent()</a></code> </p>
           </td>
           <td><p>Used to extract content from a GET request and collapse to a data.frame</p></td>
         </tr>
@@ -182,7 +194,7 @@ exposed in breaches</p></td>
 
       <footer>
       <div class="copyright">
-  <p>Developed by Steph Locke, Troy Hunt.</p>
+  <p>Developed by Steph Locke, Troy Hunt, Locke Data.</p>
 </div>
 
 <div class="pkgdown">
@@ -194,3 +206,4 @@ exposed in breaches</p></td>
 
   </body>
 </html>
+

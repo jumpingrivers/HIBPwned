@@ -29,7 +29,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="..//index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -50,7 +50,7 @@
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
 <ul class="nav navbar-nav navbar-right">
@@ -75,8 +75,11 @@
       <h1>Have I Been Pwned? API</h1>
                         <h4 class="author">Steph Locke</h4>
             
-            <h4 class="date">2017-08-04</h4>
-          </div>
+            <h4 class="date">2018-03-26</h4>
+      
+      <small>Source: <a href="https://github.com/stephlocke/HIBPwned/blob/master/vignettes/HIBP.Rmd"><code>vignettes/HIBP.Rmd</code></a></small>
+
+    </div>
 
     
     
@@ -84,13 +87,15 @@
 <p>Utilising the <a href="https://haveibeenpwned.com/API/v2">HaveIBeenPwned.com API</a>, check whether email addresses and/or user names have been present in a publicly disclosed data breach.</p>
 <p>The R package aims to be / is a feature complete wrapper of the HaveIBeenPowned API, and is useful for situations where you may want to assess data breaches or check whether one or more email addresses have been compromised.</p>
 <p>If you get a lot of value out of this package, do consider <a href="https://haveibeenpwned.com/Donate">donating to HIBP</a> since Troy Hunt does not put any limits on the API and it’s a tremendous service.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(<span class="st">"HIBPwned"</span>)</code></pre></div>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/account_breaches.html">account_breaches</a></span>(<span class="st">"steff.sullivan@gmail.com"</span>, <span class="dt">truncate=</span><span class="ot">TRUE</span>)</code></pre></div>
+<div class="sourceCode" id="cb1"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb1-1" data-line-number="1"><span class="kw">library</span>(<span class="st">"HIBPwned"</span>)</a></code></pre></div>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb2-1" data-line-number="1"><span class="kw"><a href="../reference/account_breaches.html">account_breaches</a></span>(<span class="st">"steff.sullivan@gmail.com"</span>, <span class="dt">truncate=</span><span class="ot">TRUE</span>)</a></code></pre></div>
 <pre><code>## $`steff.sullivan@gmail.com`
-##       Name
-## 1    Adobe
-## 2 LinkedIn</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/breached_sites.html">breached_sites</a></span>(<span class="st">"adobe.com"</span>)</code></pre></div>
+##             Name
+## 1          Adobe
+## 2         Disqus
+## 3       LinkedIn
+## 4 OnlinerSpambot</code></pre>
+<div class="sourceCode" id="cb4"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb4-1" data-line-number="1"><span class="kw"><a href="../reference/breached_sites.html">breached_sites</a></span>(<span class="st">"adobe.com"</span>)</a></code></pre></div>
 <pre><code>##   Title  Name    Domain BreachDate            AddedDate
 ## 1 Adobe Adobe adobe.com 2013-10-04 2013-12-04T00:00:00Z
 ##           ModifiedDate  PwnCount
@@ -101,7 +106,7 @@
 ## 1 Email addresses, Password hints, Passwords, Usernames       TRUE
 ##   IsFabricated IsSensitive IsActive IsRetired IsSpamList LogoType
 ## 1        FALSE       FALSE     TRUE     FALSE      FALSE      svg</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/breached_site.html">breached_site</a></span>(<span class="st">"Adobe"</span>)</code></pre></div>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb6-1" data-line-number="1"><span class="kw"><a href="../reference/breached_site.html">breached_site</a></span>(<span class="st">"Adobe"</span>)</a></code></pre></div>
 <pre><code>##   Title  Name    Domain BreachDate            AddedDate
 ## 1 Adobe Adobe adobe.com 2013-10-04 2013-12-04T00:00:00Z
 ##           ModifiedDate  PwnCount
@@ -112,56 +117,62 @@
 ## 1 Email addresses, Password hints, Passwords, Usernames       TRUE
 ##   IsFabricated IsSensitive IsActive IsRetired IsSpamList LogoType
 ## 1        FALSE       FALSE     TRUE     FALSE      FALSE      svg</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="../reference/data_classes.html">data_classes</a></span>()</code></pre></div>
-<pre><code>##  [1] "Account balances"                 "Age groups"                      
-##  [3] "Astrological signs"               "Auth tokens"                     
-##  [5] "Avatars"                          "Bank account numbers"            
-##  [7] "Banking PINs"                     "Beauty ratings"                  
-##  [9] "Biometric data"                   "Browser user agent details"      
-## [11] "Buying preferences"               "Car ownership statuses"          
-## [13] "Career levels"                    "Charitable donations"            
-## [15] "Chat logs"                        "Credit card CVV"                 
-## [17] "Credit cards"                     "Credit status information"       
-## [19] "Customer feedback"                "Customer interactions"           
-## [21] "Dates of birth"                   "Deceased date"                   
-## [23] "Device information"               "Device usage tracking data"      
-## [25] "Drinking habits"                  "Drug habits"                     
-## [27] "Education levels"                 "Email addresses"                 
-## [29] "Email messages"                   "Employers"                       
-## [31] "Ethnicities"                      "Family members' names"           
-## [33] "Family plans"                     "Family structure"                
-## [35] "Financial investments"            "Financial transactions"          
-## [37] "Fitness levels"                   "Genders"                         
-## [39] "Geographic locations"             "Government issued IDs"           
-## [41] "Health insurance information"     "Historical passwords"            
-## [43] "Home ownership statuses"          "Homepage URLs"                   
-## [45] "Income levels"                    "Instant messenger identities"    
-## [47] "IP addresses"                     "Job titles"                      
-## [49] "MAC addresses"                    "Marital statuses"                
-## [51] "Names"                            "Net worths"                      
-## [53] "Nicknames"                        "Parenting plans"                 
-## [55] "Partial credit card data"         "Passport numbers"                
-## [57] "Password hints"                   "Passwords"                       
-## [59] "Payment histories"                "Payment methods"                 
-## [61] "Personal descriptions"            "Personal health data"            
-## [63] "Personal interests"               "Phone numbers"                   
-## [65] "Physical addresses"               "Physical attributes"             
-## [67] "Political donations"              "Political views"                 
-## [69] "Private messages"                 "Professional skills"             
-## [71] "Purchases"                        "Purchasing habits"               
-## [73] "Races"                            "Recovery email addresses"        
-## [75] "Relationship statuses"            "Religions"                       
-## [77] "Reward program balances"          "Salutations"                     
-## [79] "Security questions and answers"   "Sexual fetishes"                 
-## [81] "Sexual orientations"              "Smoking habits"                  
-## [83] "SMS messages"                     "Social connections"              
-## [85] "Spoken languages"                 "Survey results"                  
-## [87] "Time zones"                       "Travel habits"                   
-## [89] "User statuses"                    "User website URLs"               
-## [91] "Usernames"                        "Utility bills"                   
-## [93] "Vehicle details"                  "Website activity"                
-## [95] "Work habits"                      "Years of birth"                  
-## [97] "Years of professional experience"</code></pre>
+<div class="sourceCode" id="cb8"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb8-1" data-line-number="1"><span class="kw"><a href="../reference/data_classes.html">data_classes</a></span>()</a></code></pre></div>
+<pre><code>##   [1] "Account balances"                 "Address book contacts"           
+##   [3] "Age groups"                       "Ages"                            
+##   [5] "Apps installed on devices"        "Astrological signs"              
+##   [7] "Auth tokens"                      "Avatars"                         
+##   [9] "Bank account numbers"             "Banking PINs"                    
+##  [11] "Beauty ratings"                   "Biometric data"                  
+##  [13] "Browser user agent details"       "Buying preferences"              
+##  [15] "Car ownership statuses"           "Career levels"                   
+##  [17] "Cellular network names"           "Charitable donations"            
+##  [19] "Chat logs"                        "Credit card CVV"                 
+##  [21] "Credit cards"                     "Credit status information"       
+##  [23] "Customer feedback"                "Customer interactions"           
+##  [25] "Dates of birth"                   "Deceased date"                   
+##  [27] "Deceased statuses"                "Device information"              
+##  [29] "Device usage tracking data"       "Drinking habits"                 
+##  [31] "Drug habits"                      "Eating habits"                   
+##  [33] "Education levels"                 "Email addresses"                 
+##  [35] "Email messages"                   "Employers"                       
+##  [37] "Ethnicities"                      "Family members' names"           
+##  [39] "Family plans"                     "Family structure"                
+##  [41] "Financial investments"            "Financial transactions"          
+##  [43] "Fitness levels"                   "Genders"                         
+##  [45] "Geographic locations"             "Government issued IDs"           
+##  [47] "Health insurance information"     "Historical passwords"            
+##  [49] "Home ownership statuses"          "Homepage URLs"                   
+##  [51] "IMEI numbers"                     "IMSI numbers"                    
+##  [53] "Income levels"                    "Instant messenger identities"    
+##  [55] "IP addresses"                     "Job titles"                      
+##  [57] "MAC addresses"                    "Marital statuses"                
+##  [59] "Names"                            "Nationalities"                   
+##  [61] "Net worths"                       "Nicknames"                       
+##  [63] "Parenting plans"                  "Partial credit card data"        
+##  [65] "Passport numbers"                 "Password hints"                  
+##  [67] "Passwords"                        "Payment histories"               
+##  [69] "Payment methods"                  "Personal descriptions"           
+##  [71] "Personal health data"             "Personal interests"              
+##  [73] "Phone numbers"                    "Physical addresses"              
+##  [75] "Physical attributes"              "Political donations"             
+##  [77] "Political views"                  "Private messages"                
+##  [79] "Professional skills"              "Profile photos"                  
+##  [81] "Purchases"                        "Purchasing habits"               
+##  [83] "Races"                            "Recovery email addresses"        
+##  [85] "Relationship statuses"            "Religions"                       
+##  [87] "Reward program balances"          "Salutations"                     
+##  [89] "School grades (class levels)"     "Security questions and answers"  
+##  [91] "Sexual fetishes"                  "Sexual orientations"             
+##  [93] "Smoking habits"                   "SMS messages"                    
+##  [95] "Social connections"               "Social media profiles"           
+##  [97] "Spoken languages"                 "Support tickets"                 
+##  [99] "Survey results"                   "Time zones"                      
+## [101] "Travel habits"                    "User statuses"                   
+## [103] "User website URLs"                "Usernames"                       
+## [105] "Utility bills"                    "Vehicle details"                 
+## [107] "Website activity"                 "Work habits"                     
+## [109] "Years of birth"                   "Years of professional experience"</code></pre>
 </div>
   </div>
 
@@ -172,7 +183,7 @@
 
 
       <footer><div class="copyright">
-  <p>Developed by Steph Locke, Troy Hunt.</p>
+  <p>Developed by Steph Locke, Troy Hunt, Locke Data.</p>
 </div>
 
 <div class="pkgdown">
