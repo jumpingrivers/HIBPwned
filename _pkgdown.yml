@@ -1,3 +1,18 @@
 template:
   package: lockedatapkg
   default_assets: false
+
+reference:
+  - title: Find breaches and pastes for an email account
+    contents:
+    - account_breaches
+    - pastes
+  - title: Find metadata about breaches
+    contents:
+    - data_classes
+    - breached_sites
+    - breached_site
+  - title: Utils
+    contents:
+    - HIBP_headers
+    - GETcontent

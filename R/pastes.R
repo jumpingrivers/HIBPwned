@@ -5,23 +5,29 @@
 #' @param ... Optional passthrough to HIBP_headers()
 #'
 #' @return List of data.frames containing results
+#' @details According to the API docs
+#' (\url{https://haveibeenpwned.com/FAQs#Pastes}),
+#' "A "paste" is information that has been "pasted" to a publicly facing website
+#'  designed to share content such as Pastebin."
 #' @export
 #'
 #' @examples
 #' pastes(c("steff.sullivan@gmail.com","stephanie.g.locke@gmail.com"))
-pastes<-function(
-   emails
-  ,...){
+pastes <- function(
+                   emails
+                   , ...) {
+  if (length(emails) == 0 | !inherits(emails, "character")){
+    stop("Problematic emails")
+  }
 
-  if(length(emails)==0|!inherits(emails,"character")) stop("Problematic emails")
+  encoded <- urltools::url_encode(emails)
+  URLS <- paste0(# nolint
+    "https://haveibeenpwned.com/api/pasteaccount/"
+    , encoded
+  )
 
-  encoded<-urltools::url_encode(emails)
-  URLS<-paste0("https://haveibeenpwned.com/api/pasteaccount/"
-               ,encoded)
-
-  res<-lapply(URLS, GETcontent, HIBP_headers(...))
-  names(res)<-emails
+  res <- lapply(URLS, GETcontent, HIBP_headers(...))# nolint
+  names(res) <- emails
 
   return(res)
-
 }

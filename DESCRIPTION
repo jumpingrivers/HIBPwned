@@ -8,7 +8,9 @@ Authors@R: c(person("Steph", "Locke"
              , email = "troyhunt@hotmail.com"
              , role = c("aut")
              , comment="HaveIBeenPwned.com"
-             ))
+             ),
+             person("Locke Data", role = c("fnd")),
+             person("Maëlle", "Salmon", role = c("ctb")))
 Description: Utilising the 'Have I been pwned?' API (see <https://haveibeenpwned.com/API/v2>
     for more information), check whether email addresses and/or user names have been present
     in a publicly disclosed data breach.
@@ -16,16 +18,18 @@ Depends:
     R (>= 3.2.3)
 License: MIT + file LICENSE
 LazyData: true
-Suggests:
+Suggests: 
     testthat,
     knitr,
-    rmarkdown
+    rmarkdown,
+    lintr
 Imports:
     httr,
     urltools,
     jsonlite,
     ratelimitr
-RoxygenNote: 6.0.1
+RoxygenNote: 6.0.1.9000
 VignetteBuilder: knitr
-URL: https://github.com/stephlocke/HIBPwned
+URL: https://github.com/stephlocke/HIBPwned,https://itsalocke.com/hibpwned/
 BugReports: https://github.com/stephlocke/HIBPwned/issues
+Encoding: UTF-8

@@ -13,5 +13,5 @@ GETcontent(...)
 data.frame
 }
 \description{
-Used to extract content from a GET request and collapse to a data.frame
+It calls a helper function that retries up to 6 times
 }

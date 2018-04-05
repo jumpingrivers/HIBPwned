@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Search for data breaches associated with one or more accounts. � account_breaches • HIBPwned</title>
+<title>Search for data breaches associated with one or more accounts. — account_breaches • HIBPwned</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -23,8 +23,6 @@
 <link href="../pkgdown.css" rel="stylesheet">
 <script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -56,7 +54,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
-  <a href="..//index.html">
+  <a href="../index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -77,7 +75,7 @@
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -100,15 +98,17 @@
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Search for data breaches associated with one or more accounts.</h1>
+    <small>Source: <a href='https://github.com/stephlocke/HIBPwned/blob/master/R/account_breaches.R'><code>R/account_breaches.R</code></a></small>
     </div>
 
     
     <p>Search for data breaches associated with one or more accounts.</p>
     
 
-    <pre class="usage"><span class='fu'>account_breaches</span>(<span class='no'>accounts</span>, <span class='kw'>truncate</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>domain</span> <span class='kw'>=</span> <span class='kw'>NULL</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>account_breaches</span>(<span class='no'>accounts</span>, <span class='kw'>truncate</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>domain</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
+  <span class='kw'>as_list</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='no'>...</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
@@ -117,11 +117,16 @@
     </tr>
     <tr>
       <th>truncate</th>
-      <td><p>Whether responses should be trimmed to just name of breached site</p></td>
+      <td><p>Whether responses should be trimmed to just name of
+breached site</p></td>
     </tr>
     <tr>
       <th>domain</th>
       <td><p>Search a specific domain</p></td>
+    </tr>
+    <tr>
+      <th>as_list</th>
+      <td><p>whether to return results as a list (default, TRUE) or a data.frame</p></td>
     </tr>
     <tr>
       <th>...</th>
@@ -136,33 +141,48 @@
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>account_breaches</span>(<span class='fu'>c</span>(<span class='st'>"steff.sullivan@gmail.com"</span>,<span class='st'>"stephanie.g.locke@gmail.com"</span>))</div><div class='output co'>#&gt; $`steff.sullivan@gmail.com`
-#&gt;      Title     Name       Domain BreachDate            AddedDate
-#&gt; 1    Adobe    Adobe    adobe.com 2013-10-04 2013-12-04T00:00:00Z
-#&gt; 2 LinkedIn LinkedIn linkedin.com 2012-05-05 2016-05-21T21:35:40Z
+#&gt;             Title           Name       Domain BreachDate            AddedDate
+#&gt; 1           Adobe          Adobe    adobe.com 2013-10-04 2013-12-04T00:00:00Z
+#&gt; 2          Disqus         Disqus   disqus.com 2012-07-01 2017-10-06T23:03:51Z
+#&gt; 3        LinkedIn       LinkedIn linkedin.com 2012-05-05 2016-05-21T21:35:40Z
+#&gt; 4 Onliner Spambot OnlinerSpambot              2017-08-28 2017-08-29T19:25:56Z
 #&gt;           ModifiedDate  PwnCount
 #&gt; 1 2013-12-04T00:00:00Z 152445165
-#&gt; 2 2016-05-21T21:35:40Z 164611595
-#&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       Description
-#&gt; 1 In October 2013, 153 million Adobe accounts were breached with each containing an internal ID, username, email, &lt;em&gt;encrypted&lt;/em&gt; password and a password hint in plain text. The password cryptography was poorly done and &lt;a href="http://stricture-group.com/files/adobe-top100.txt" target="_blank" rel="noopener"&gt;many were quickly resolved back to plain text&lt;/a&gt;. The unencrypted hints also &lt;a href="http://www.troyhunt.com/2013/11/adobe-credentials-and-serious.html" target="_blank" rel="noopener"&gt;disclosed much about the passwords&lt;/a&gt; adding further to the risk that hundreds of millions of Adobe customers already faced.
-#&gt; 2                                                                                                                                        In May 2016, &lt;a href="https://www.troyhunt.com/observations-and-thoughts-on-the-linkedin-data-breach" target="_blank" rel="noopener"&gt;LinkedIn had 164 million email addresses and passwords exposed&lt;/a&gt;. Originally hacked in 2012, the data remained out of sight until being offered for sale on a dark market site 4 years later. The passwords in the breach were stored as SHA1 hashes without salt, the vast majority of which were quickly cracked in the days following the release of the data.
+#&gt; 2 2017-10-06T23:03:51Z  17551044
+#&gt; 3 2016-05-21T21:35:40Z 164611595
+#&gt; 4 2017-08-29T19:25:56Z 711477622
+#&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        Description
+#&gt; 1                                                                                                                                                                                  In October 2013, 153 million Adobe accounts were breached with each containing an internal ID, username, email, &lt;em&gt;encrypted&lt;/em&gt; password and a password hint in plain text. The password cryptography was poorly done and &lt;a href="http://stricture-group.com/files/adobe-top100.txt" target="_blank" rel="noopener"&gt;many were quickly resolved back to plain text&lt;/a&gt;. The unencrypted hints also &lt;a href="http://www.troyhunt.com/2013/11/adobe-credentials-and-serious.html" target="_blank" rel="noopener"&gt;disclosed much about the passwords&lt;/a&gt; adding further to the risk that hundreds of millions of Adobe customers already faced.
+#&gt; 2                                                                                                                                                                                                                                                                          In October 2017, the blog commenting service &lt;a href="https://blog.disqus.com/security-alert-user-info-breach" target="_blank" rel="noopener"&gt;Disqus announced they'd suffered a data breach&lt;/a&gt;. The breach dated back to July 2012 but wasn't identified until years later when the data finally surfaced. The breach contained over 17.5 million unique email addresses and usernames. Users who created logins on Disqus had salted SHA1 hashes of passwords whilst users who logged in via social providers only had references to those accounts.
+#&gt; 3                                                                                                                                                                                                                                                                                                                         In May 2016, &lt;a href="https://www.troyhunt.com/observations-and-thoughts-on-the-linkedin-data-breach" target="_blank" rel="noopener"&gt;LinkedIn had 164 million email addresses and passwords exposed&lt;/a&gt;. Originally hacked in 2012, the data remained out of sight until being offered for sale on a dark market site 4 years later. The passwords in the breach were stored as SHA1 hashes without salt, the vast majority of which were quickly cracked in the days following the release of the data.
+#&gt; 4 In August 2017, a spambot by the name of &lt;a href="https://benkowlab.blogspot.com.au/2017/08/from-onliner-spambot-to-millions-of.html" target="_blank" rel="noopener"&gt;Onliner Spambot was identified by security researcher Benkow mo&lt;U+029E&gt;u&lt;U+018E&gt;q&lt;/a&gt;. The malicious software contained a server-based component located on an IP address in the Netherlands which exposed a large number of files containing personal information. In total, there were 711 million unique email addresses, many of which were also accompanied by corresponding passwords. A full write-up on what data was found is in the blog post titled &lt;a href="https://www.troyhunt.com/inside-the-massive-711-million-record-onliner-spambot-dump" target="_blank" rel="noopener"&gt;Inside the Massive 711 Million Record Onliner Spambot Dump&lt;/a&gt;.
 #&gt;                                             DataClasses IsVerified IsFabricated
 #&gt; 1 Email addresses, Password hints, Passwords, Usernames       TRUE        FALSE
-#&gt; 2                            Email addresses, Passwords       TRUE        FALSE
+#&gt; 2                 Email addresses, Passwords, Usernames       TRUE        FALSE
+#&gt; 3                            Email addresses, Passwords       TRUE        FALSE
+#&gt; 4                            Email addresses, Passwords       TRUE        FALSE
 #&gt;   IsSensitive IsActive IsRetired IsSpamList LogoType
 #&gt; 1       FALSE     TRUE     FALSE      FALSE      svg
 #&gt; 2       FALSE     TRUE     FALSE      FALSE      svg
+#&gt; 3       FALSE     TRUE     FALSE      FALSE      svg
+#&gt; 4       FALSE     TRUE     FALSE       TRUE      png
 #&gt; 
 #&gt; $`stephanie.g.locke@gmail.com`
 #&gt;      Title     Name       Domain BreachDate            AddedDate
-#&gt; 1 GeekedIn GeekedIn geekedin.net 2016-08-15 2016-11-17T19:44:24Z
+#&gt; 1    Bitly    Bitly    bitly.com 2014-05-08 2017-10-06T06:31:50Z
+#&gt; 2 GeekedIn GeekedIn geekedin.net 2016-08-15 2016-11-17T19:44:24Z
 #&gt;           ModifiedDate PwnCount
-#&gt; 1 2016-11-17T19:44:24Z  1073164
+#&gt; 1 2017-10-06T08:05:10Z  9313136
+#&gt; 2 2016-11-17T19:44:24Z  1073164
 #&gt;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           Description
-#&gt; 1 In August 2016, the technology recruitment site &lt;a href="http://geekedin.net" target="_blank" rel="noopener"&gt;GeekedIn&lt;/a&gt; left a MongoDB database exposed and over 8M records were extracted by an unknown third party. The breached data was originally scraped from GitHub in violation of their terms of use and contained information exposed in public profiles, including over 1 million members' email addresses. Full details on the incident (including how impacted members can see their leaked data) are covered in the blog post on &lt;a href="https://www.troyhunt.com/8-million-github-profiles-were-leaked-from-geekedins-mongodb-heres-how-to-see-yours" target="_blank" rel="noopener"&gt;8 million GitHub profiles were leaked from GeekedIn's MongoDB - here's how to see yours&lt;/a&gt;.
+#&gt; 1                                                                                                                                                                                                                                                                                                                                                                                                                                    In May 2014, the link management company &lt;a href="https://bitly.com/blog/urgent-security-update-regarding-your-bitly-account/" target="_blank" rel="noopener"&gt;Bitly announced they'd suffered a data breach&lt;/a&gt;. The breach contained over 9.3 million unique email addresses, usernames and hashed passwords, most using SHA1 with a small number using bcrypt.
+#&gt; 2 In August 2016, the technology recruitment site &lt;a href="http://geekedin.net" target="_blank" rel="noopener"&gt;GeekedIn&lt;/a&gt; left a MongoDB database exposed and over 8M records were extracted by an unknown third party. The breached data was originally scraped from GitHub in violation of their terms of use and contained information exposed in public profiles, including over 1 million members' email addresses. Full details on the incident (including how impacted members can see their leaked data) are covered in the blog post on &lt;a href="https://www.troyhunt.com/8-million-github-profiles-were-leaked-from-geekedins-mongodb-heres-how-to-see-yours" target="_blank" rel="noopener"&gt;8 million GitHub profiles were leaked from GeekedIn's MongoDB - here's how to see yours&lt;/a&gt;.
 #&gt;                                                                                                      DataClasses
-#&gt; 1 Email addresses, Geographic locations, Names, Professional skills, Usernames, Years of professional experience
+#&gt; 1                                                                          Email addresses, Passwords, Usernames
+#&gt; 2 Email addresses, Geographic locations, Names, Professional skills, Usernames, Years of professional experience
 #&gt;   IsVerified IsFabricated IsSensitive IsActive IsRetired IsSpamList LogoType
-#&gt; 1       TRUE        FALSE       FALSE     TRUE     FALSE      FALSE      png
+#&gt; 1       TRUE        FALSE       FALSE     TRUE     FALSE      FALSE      svg
+#&gt; 2       TRUE        FALSE       FALSE     TRUE     FALSE      FALSE      png
 #&gt; </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -180,7 +200,7 @@
 
       <footer>
       <div class="copyright">
-  <p>Developed by Steph Locke, Troy Hunt.</p>
+  <p>Developed by Steph Locke, Troy Hunt, Locke Data.</p>
 </div>
 
 <div class="pkgdown">
@@ -192,3 +212,4 @@
 
   </body>
 </html>
+
