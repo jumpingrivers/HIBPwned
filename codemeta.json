@@ -1,0 +1,160 @@
+{
+  "@context": ["https://doi.org/10.5063/schema/codemeta-2.0", "http://schema.org"],
+  "@type": "SoftwareSourceCode",
+  "identifier": "HIBPwned",
+  "description": "Utilising the 'Have I been pwned?' API (see <https://haveibeenpwned.com/API/v2>\n    for more information), check whether email addresses and/or user names have been present\n    in a publicly disclosed data breach.",
+  "name": "HIBPwned: Bindings for the 'HaveIBeenPwned.com' Data Breach API",
+  "codeRepository": "https://github.com/lockedata/HIBPwned",
+  "issueTracker": "https://github.com/lockedata/HIBPwned/issues",
+  "license": "https://spdx.org/licenses/MIT",
+  "version": "0.1.6",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "version": "3.4.4",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 3.4.4 (2018-03-15)",
+  "provider": {
+    "@id": "https://cran.r-project.org",
+    "@type": "Organization",
+    "name": "Central R Archive Network (CRAN)",
+    "url": "https://cran.r-project.org"
+  },
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Steph",
+      "familyName": "Locke",
+      "email": "stephanie.g.locke@gmail.com"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Troy",
+      "familyName": "Hunt",
+      "email": "troyhunt@hotmail.com"
+    }
+  ],
+  "contributor": [
+    {
+      "@type": "Person",
+      "givenName": "Maëlle",
+      "familyName": "Salmon"
+    }
+  ],
+  "maintainer": {
+    "@type": "Person",
+    "givenName": "Steph",
+    "familyName": "Locke",
+    "email": "stephanie.g.locke@gmail.com"
+  },
+  "funder": [
+    {
+      "@type": "Organization",
+      "name": "Locke Data"
+    }
+  ],
+  "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "testthat",
+      "name": "testthat",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Central R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "knitr",
+      "name": "knitr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Central R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "rmarkdown",
+      "name": "rmarkdown",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Central R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "lintr",
+      "name": "lintr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Central R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      }
+    }
+  ],
+  "softwareRequirements": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "httr",
+      "name": "httr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Central R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "urltools",
+      "name": "urltools",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Central R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "jsonlite",
+      "name": "jsonlite",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Central R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "ratelimitr",
+      "name": "ratelimitr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Central R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      }
+    },
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "R",
+      "name": "R",
+      "version": "3.2.3"
+    }
+  ],
+  "contIntegration": "https://travis-ci.org/lockedata/HIBPwned",
+  "developmentStatus": "active",
+  "releaseNotes": "https://github.com/lockedata/HIBPwned/blob/master/NEWS.md",
+  "readme": "https://github.com/lockedata/HIBPwned/blob/master/README.md",
+  "fileSize": "6.652KB"
+}
