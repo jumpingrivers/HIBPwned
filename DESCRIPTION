@@ -30,6 +30,6 @@ Imports:
     ratelimitr
 RoxygenNote: 6.0.1.9000
 VignetteBuilder: knitr
-URL: https://github.com/stephlocke/HIBPwned,https://itsalocke.com/hibpwned/
-BugReports: https://github.com/stephlocke/HIBPwned/issues
+URL: https://github.com/lockedata/HIBPwned,https://itsalocke.com/hibpwned/
+BugReports: https://github.com/lockedata/HIBPwned/issues
 Encoding: UTF-8

@@ -12,8 +12,8 @@ knitr::opts_chunk$set(
 )
 ```
 # HIBPwned
-[![Travis-CI Build Status](https://travis-ci.org/stephlocke/HIBPwned.svg?branch=master)](https://travis-ci.org/stephlocke/HIBPwned)
-[![Coverage Status](https://coveralls.io/repos/github/stephlocke/HIBPwned/badge.svg?branch=master)](https://coveralls.io/github/stephlocke/HIBPwned?branch=master)
+[![Travis-CI Build Status](https://travis-ci.org/lockedata/HIBPwned.svg?branch=master)](https://travis-ci.org/lockedata/HIBPwned)
+[![Coverage Status](https://coveralls.io/repos/github/lockedata/HIBPwned/badge.svg?branch=master)](https://coveralls.io/github/lockedata/HIBPwned?branch=master)
 [![Total CRAN downloads](http://cranlogs.r-pkg.org/badges/grand-total/HIBPwned)](http://cranlogs.r-pkg.org/badges/grand-total/HIBPwned) [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
 
 
