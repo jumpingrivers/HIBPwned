@@ -7,6 +7,10 @@
 GETcontent(URLS, headers, ...)
 }
 \arguments{
+\item{URLS}{urls}
+
+\item{headers}{headers as built by HIBP_headers()}
+
 \item{...}{Pass through arguments}
 }
 \value{
