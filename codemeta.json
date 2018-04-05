@@ -1,5 +1,8 @@
 {
-  "@context": ["https://doi.org/10.5063/schema/codemeta-2.0", "http://schema.org"],
+  "@context": [
+    "https://doi.org/10.5063/schema/codemeta-2.0",
+    "http://schema.org"
+  ],
   "@type": "SoftwareSourceCode",
   "identifier": "HIBPwned",
   "description": "Utilising the 'Have I been pwned?' API (see <https://haveibeenpwned.com/API/v2>\n    for more information), check whether email addresses and/or user names have been present\n    in a publicly disclosed data breach.",
@@ -103,8 +106,8 @@
   "softwareRequirements": [
     {
       "@type": "SoftwareApplication",
-      "identifier": "httr",
-      "name": "httr",
+      "identifier": "crul",
+      "name": "crul",
       "provider": {
         "@id": "https://cran.r-project.org",
         "@type": "Organization",
@@ -156,5 +159,5 @@
   "developmentStatus": "active",
   "releaseNotes": "https://github.com/lockedata/HIBPwned/blob/master/NEWS.md",
   "readme": "https://github.com/lockedata/HIBPwned/blob/master/README.md",
-  "fileSize": "6.652KB"
+  "fileSize": "6.752KB"
 }

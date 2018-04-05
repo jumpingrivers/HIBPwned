@@ -4,29 +4,23 @@ test_that("headers are constructed correctly", {
   res <- HIBP_headers()
 
   # Correct type
-  expect_is(res, "request")
-
-  # No unexpected population
-  expect_null(res$method)
-  expect_null(res$url)
-  expect_null(res$fields)
-  expect_null(res$options)
-  expect_null(res$auth_token)
-  expect_null(res$output)
+  expect_is(res, "list")
 
   # Expected population
-  expect_true(length(res$headers) == 2)
-  expect_named(res$headers, c("api-version", "User-Agent"))
-  expect_equal(res$headers,
-               c(`api-version` = "2", `User-Agent` = "HIBPwned R pkg"))
+  expect_true(length(res) == 2)
+  expect_named(res, c("api-version", "User-Agent"))
+  expect_equal(res,
+               list(`api-version` = "2", `User-Agent` = "HIBPwned R pkg"))
 })
 
 test_that("alternative agents work", {
-  res <- HIBP_headers("blah")
-  expect_equal(res$headers, c(`api-version` = "2", `User-Agent` = "blah"))
+  res <- HIBPwned:::crul_get("https://haveibeenpwned.com/api/breaches",
+                  HIBP_headers("blah"))
+  expect_equal(res$request_headers$`User-Agent`, "blah")
 
-  res <- HIBP_headers(agent = "bloo")
-  expect_equal(res$headers, c(`api-version` = "2", `User-Agent` = "bloo"))
+  res <- HIBPwned:::crul_get("https://haveibeenpwned.com/api/breaches",
+                             HIBP_headers("bloo"))
+  expect_equal(res$request_headers$`User-Agent`, "bloo")
 })
 
 test_that("handles incorrect values", {

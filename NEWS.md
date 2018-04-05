@@ -1,6 +1,8 @@
 # HIBPwned 0.1.7
 * account_breaches: new as_list argument, when FALSE the function returns a data.frame instead of a list (TRUE, default and old behaviour).
 
+* httr replaced with crul
+
 # HIBPwned 0.1.6
 * Bug fix: Adding some time to the rate limit
 
