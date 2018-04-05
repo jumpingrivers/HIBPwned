@@ -4,7 +4,7 @@
 \alias{GETcontent}
 \title{Used to extract content from a GET request and collapse to a data.frame}
 \usage{
-GETcontent(...)
+GETcontent(URLS, headers, ...)
 }
 \arguments{
 \item{...}{Pass through arguments}
