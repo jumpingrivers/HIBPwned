@@ -4,9 +4,13 @@
 \alias{GETcontent}
 \title{Used to extract content from a GET request and collapse to a data.frame}
 \usage{
-GETcontent(...)
+GETcontent(URLS, headers, ...)
 }
 \arguments{
+\item{URLS}{urls}
+
+\item{headers}{headers as built by HIBP_headers()}
+
 \item{...}{Pass through arguments}
 }
 \value{

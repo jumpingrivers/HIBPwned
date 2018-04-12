@@ -13,8 +13,6 @@ HIBP_headers <- function(agent="HIBPwned R pkg") {# nolint
     stop("Problematic agent")
   }
 
-  httr::add_headers(
-    `api-version` = 2
-    , `User-Agent` = agent
-  )
+  list(`api-version` = "2"
+       , `User-Agent` = agent)
 }

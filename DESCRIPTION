@@ -24,7 +24,7 @@ Suggests:
     rmarkdown,
     lintr
 Imports:
-    httr,
+    crul,
     urltools,
     jsonlite,
     ratelimitr
