@@ -16,7 +16,7 @@ breached_site <- function(name, verbose = TRUE, agent = NULL) {
   URLS <- "https://haveibeenpwned.com/api/breach/" # nolint
   encoded <- urltools::url_encode(name)
   URLS <- paste0(URLS, encoded) # nolint
-  res <- GETcontent(URLS, HIBP_headers(agent))# nolint
+  res <- GETcontent(URLS, HIBP_headers(agent), verbose)# nolint
   if (length(res) == 1) {
     res <- list(
       Title = NA, Name = name, Domain = NA,

@@ -27,7 +27,7 @@ pastes <- function(
     , encoded
   )
 
-  res <- lapply(URLS, GETcontent, HIBP_headers(agent))# nolint
+  res <- lapply(URLS, GETcontent, HIBP_headers(agent), verbose)# nolint
   names(res) <- emails
 
   return(res)

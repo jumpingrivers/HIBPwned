@@ -11,6 +11,6 @@
 #' data_classes()
 data_classes <- function(verbose = TRUE, agent = NULL) {
   URLS <- "https://haveibeenpwned.com/api/dataclasses" # nolint
-  res <- GETcontent(URLS, HIBP_headers(agent))# nolint
+  res <- GETcontent(URLS, HIBP_headers(agent), verbose)# nolint
   return(res)
 }
