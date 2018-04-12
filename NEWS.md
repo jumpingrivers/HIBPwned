@@ -7,6 +7,8 @@
 
 * implemented unit tests with webmockr for testing the handling of http errors.
 
+* now caches results inside an active R session thanks to `memoise`.
+
 # HIBPwned 0.1.6
 * Bug fix: Adding some time to the rate limit
 
