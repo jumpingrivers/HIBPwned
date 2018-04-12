@@ -47,7 +47,7 @@ account_breaches <- function(
     URLS <- urltools::param_set(URLS, "domain", urltools::url_encode(domain))# nolint
   }
 
-  res <- lapply(URLS, GETcontent, HIBP_headers(agent))# nolint
+  res <- lapply(URLS, GETcontent, HIBP_headers(agent), verbose = verbose)# nolint
   names(res) <- accounts
   if (!as_list){
     # bind the list and keep the account as a column
