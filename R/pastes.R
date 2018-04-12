@@ -4,6 +4,8 @@
 #' @param emails A character vector of email addresses
 #' @inheritParams data_classes
 #'
+#' @inherit data_classes details
+#'
 #' @return List of data.frames containing results
 #' @details According to the API docs
 #' (\url{https://haveibeenpwned.com/FAQs#Pastes}),

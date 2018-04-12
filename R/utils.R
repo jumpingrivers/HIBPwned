@@ -7,7 +7,7 @@
 #'
 #' @return data.frame
 
-GETcontent <- function(URLS, headers, verbose) {# nolint
+.GETcontent <- function(URLS, headers, verbose) {# nolint
   output <- get_and_retry(URLS, headers, verbose)
 
   try_number <- 1
@@ -27,15 +27,21 @@ GETcontent <- function(URLS, headers, verbose) {# nolint
   return(output)
 }
 
+
+GETcontent <- memoise::memoise(.GETcontent)
+
 crul_get <- function(url, headers){
   crul::HttpClient$new(url = url,
                        headers = headers)$get()
 }
 
+
 get <- ratelimitr::limit_rate(
   crul_get,
   ratelimitr::rate(n = 1, period = 1.6)
 )
+
+
 
 get_and_retry <- function(url, headers, verbose) {# nolint
   resp <- get(url, headers)

@@ -3,6 +3,7 @@
 #'
 #' @param agent The user agent the API call should run under
 #'
+#'
 #' @return headers
 #' @export
 #'

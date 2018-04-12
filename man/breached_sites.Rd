@@ -19,6 +19,12 @@ Data.frame containing breach details
 \description{
 Get all (nonsensitive) breached sites in HIBP
 }
+\details{
+Note that the package uses \code{memoise}
+(\url{https://github.com/r-lib/memoise})
+with no timeout argument
+so that results are cached inside an active R session.
+}
 \examples{
 breached_sites()
 }

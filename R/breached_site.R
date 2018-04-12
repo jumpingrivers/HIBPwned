@@ -3,6 +3,8 @@
 #' @param name Search for a specific named breach
 #' @inheritParams data_classes
 #'
+#' @inherit data_classes details
+#'
 #' @return Data.frame containing breach details
 #' @export
 #'

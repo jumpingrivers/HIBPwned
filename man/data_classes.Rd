@@ -19,6 +19,12 @@ Data.frame containing data class details
 Get list of classes of data that have been
 exposed in breaches
 }
+\details{
+Note that the package uses \code{memoise}
+(\url{https://github.com/r-lib/memoise})
+with no timeout argument
+so that results are cached inside an active R session.
+}
 \examples{
 data_classes()
 }

@@ -8,6 +8,9 @@
 #' @inheritParams data_classes
 #'
 #' @return List of data.frames containing results
+#'
+#' @inherit data_classes details
+#'
 #' @export
 #'
 #' @examples

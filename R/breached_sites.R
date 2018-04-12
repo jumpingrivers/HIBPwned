@@ -3,6 +3,8 @@
 #' @param domain Search a specific domain
 #' @inheritParams data_classes
 #'
+#' @inherit data_classes details
+#'
 #' @return Data.frame containing breach details
 #' @export
 #'

@@ -27,6 +27,12 @@ List of data.frames containing results
 \description{
 Search for data breaches associated with one or more accounts.
 }
+\details{
+Note that the package uses \code{memoise}
+(\url{https://github.com/r-lib/memoise})
+with no timeout argument
+so that results are cached inside an active R session.
+}
 \examples{
 account_breaches(c("steff.sullivan@gmail.com","stephanie.g.locke@gmail.com"))
 }
