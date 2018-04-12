@@ -106,7 +106,7 @@
     
 
     <pre class="usage"><span class='fu'>account_breaches</span>(<span class='no'>accounts</span>, <span class='kw'>truncate</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>domain</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
-  <span class='kw'>as_list</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='no'>...</span>)</pre>
+  <span class='kw'>as_list</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>agent</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -129,14 +129,25 @@ breached site</p></td>
       <td><p>whether to return results as a list (default, TRUE) or a data.frame</p></td>
     </tr>
     <tr>
-      <th>...</th>
-      <td><p>Optional passthrough to HIBP_headers()</p></td>
+      <th>verbose</th>
+      <td><p>whether to message about http errors and re-tries</p></td>
+    </tr>
+    <tr>
+      <th>agent</th>
+      <td><p>agent to be used as header in calls, by default "HIBPwned R pkg". # nolint</p></td>
     </tr>
     </table>
     
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
     <p>List of data.frames containing results</p>
+    
+    <h2 class="hasAnchor" id="details"><a class="anchor" href="#details"></a>Details</h2>
+
+    <p>Note that the package uses <code>memoise</code>
+(<a href='https://github.com/r-lib/memoise'>https://github.com/r-lib/memoise</a>)
+with no timeout argument
+so that results are cached inside an active R session.</p>
     
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
@@ -191,6 +202,8 @@ breached site</p></td>
       <li><a href="#arguments">Arguments</a></li>
       
       <li><a href="#value">Value</a></li>
+
+      <li><a href="#details">Details</a></li>
       
       <li><a href="#examples">Examples</a></li>
     </ul>

@@ -108,7 +108,7 @@ a paste</h1>
 a paste</p>
     
 
-    <pre class="usage"><span class='fu'>pastes</span>(<span class='no'>emails</span>, <span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>pastes</span>(<span class='no'>emails</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>agent</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
@@ -118,8 +118,12 @@ a paste</p>
       <td><p>A character vector of email addresses</p></td>
     </tr>
     <tr>
-      <th>...</th>
-      <td><p>Optional passthrough to HIBP_headers()</p></td>
+      <th>verbose</th>
+      <td><p>whether to message about http errors and re-tries</p></td>
+    </tr>
+    <tr>
+      <th>agent</th>
+      <td><p>agent to be used as header in calls, by default "HIBPwned R pkg". # nolint</p></td>
     </tr>
     </table>
     
@@ -137,11 +141,11 @@ a paste</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='fu'>pastes</span>(<span class='fu'>c</span>(<span class='st'>"steff.sullivan@gmail.com"</span>,<span class='st'>"stephanie.g.locke@gmail.com"</span>))</div><div class='output co'>#&gt; $`steff.sullivan@gmail.com`
-#&gt;   name
+#&gt;   Name
 #&gt; 1   NA
 #&gt; 
 #&gt; $`stephanie.g.locke@gmail.com`
-#&gt;   name
+#&gt;   Name
 #&gt; 1   NA
 #&gt; </div></pre>
   </div>
