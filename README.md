@@ -1,16 +1,3 @@
----
-output: github_document
----
-
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-```{r, echo = FALSE}
-knitr::opts_chunk$set(
-  collapse = TRUE,
-  comment = "#>",
-  fig.path = "README-"
-)
-```
 # HIBPwned
 [![Travis-CI Build Status](https://travis-ci.org/lockedata/HIBPwned.svg?branch=master)](https://travis-ci.org/lockedata/HIBPwned)
 [![Coverage Status](https://coveralls.io/repos/github/lockedata/HIBPwned/badge.svg?branch=master)](https://coveralls.io/github/lockedata/HIBPwned?branch=master)
