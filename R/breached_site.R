@@ -1,14 +1,14 @@
 #' Get a specific breached site, based in breach name (not domain)
 #'
 #' @param name Search for a specific named breach
-#' @param ... Optional passthrough to HIBP_headers()
+#' @inheritParams data_classes
 #'
 #' @return Data.frame containing breach details
 #' @export
 #'
 #' @examples
 #' breached_site("Adobe")
-breached_site <- function(name, ...) {
+breached_site <- function(name, verbose = TRUE, agent = NULL) {
   if (is.null(name) | length(name) != 1 | !inherits(name, "character")){
     stop("Problematic breach name")
   }
@@ -16,7 +16,7 @@ breached_site <- function(name, ...) {
   URLS <- "https://haveibeenpwned.com/api/breach/" # nolint
   encoded <- urltools::url_encode(name)
   URLS <- paste0(URLS, encoded) # nolint
-  res <- GETcontent(URLS, HIBP_headers(...))# nolint
+  res <- GETcontent(URLS, HIBP_headers(agent))# nolint
   if (length(res) == 1) {
     res <- list(
       Title = NA, Name = name, Domain = NA,

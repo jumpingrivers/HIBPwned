@@ -5,10 +5,12 @@
 \title{Get list of classes of data that have been
 exposed in breaches}
 \usage{
-data_classes(...)
+data_classes(verbose = TRUE, agent = NULL)
 }
 \arguments{
-\item{...}{Optional passthrough to HIBP_headers()}
+\item{verbose}{whether to message about http errors and re-tries}
+
+\item{agent}{agent to be used as header in calls, by default "HIBPwned R pkg". # nolint}
 }
 \value{
 Data.frame containing data class details

@@ -4,14 +4,14 @@
 \alias{GETcontent}
 \title{Used to extract content from a GET request and collapse to a data.frame}
 \usage{
-GETcontent(URLS, headers, ...)
+GETcontent(URLS, headers, verbose)
 }
 \arguments{
 \item{URLS}{urls}
 
 \item{headers}{headers as built by HIBP_headers()}
 
-\item{...}{Pass through arguments}
+\item{verbose}{whether to message about http errors and re-tries}
 }
 \value{
 data.frame

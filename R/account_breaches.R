@@ -5,7 +5,7 @@
 #' breached site
 #' @param domain Search a specific domain
 #' @param as_list whether to return results as a list (default, TRUE) or a data.frame
-#' @param ... Optional passthrough to HIBP_headers()
+#' @inheritParams data_classes
 #'
 #' @return List of data.frames containing results
 #' @export
@@ -16,7 +16,9 @@ account_breaches <- function(
                              accounts
                              , truncate=FALSE
                              , domain=NULL
-                             , as_list = TRUE, ...) {
+                             , as_list = TRUE
+                             , verbose = TRUE
+                             , agent = NULL) {
 
   if (length(accounts) == 0 | !inherits(accounts, "character")){
     stop("Problematic accounts")
@@ -42,7 +44,7 @@ account_breaches <- function(
     URLS <- urltools::param_set(URLS, "domain", urltools::url_encode(domain))# nolint
   }
 
-  res <- lapply(URLS, GETcontent, HIBP_headers(...))# nolint
+  res <- lapply(URLS, GETcontent, HIBP_headers(agent))# nolint
   names(res) <- accounts
   if (!as_list){
     # bind the list and keep the account as a column

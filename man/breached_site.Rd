@@ -4,12 +4,14 @@
 \alias{breached_site}
 \title{Get a specific breached site, based in breach name (not domain)}
 \usage{
-breached_site(name, ...)
+breached_site(name, verbose = TRUE, agent = NULL)
 }
 \arguments{
 \item{name}{Search for a specific named breach}
 
-\item{...}{Optional passthrough to HIBP_headers()}
+\item{verbose}{whether to message about http errors and re-tries}
+
+\item{agent}{agent to be used as header in calls, by default "HIBPwned R pkg". # nolint}
 }
 \value{
 Data.frame containing breach details
