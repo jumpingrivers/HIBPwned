@@ -41,7 +41,7 @@ get_and_retry <- function(url, headers, verbose) {# nolint
   if (code > 200){
     # this will happen when no result
     if (code == 404){
-      res <- data.frame(name = NA)
+      res <- data.frame(Name = NA)
     }else{
       # this is more problematic and we shall try again
       if (verbose){
