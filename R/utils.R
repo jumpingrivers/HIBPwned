@@ -6,14 +6,14 @@
 #' @param ... Pass through arguments
 #'
 #' @return data.frame
-GETcontent <- function(URLS, headers,...) {# nolint
+GETcontent <- function(URLS, headers, ...) {# nolint
   output <- get_and_retry(URLS, headers, ...)
   try_number <- 1
   while (is.null(output) && try_number < 6) {
     try_number <- try_number + 1
     message(paste0("Try number ", try_number))
     Sys.sleep(2 ^ try_number)
-    output <- get_and_retry(...)
+    output <- get_and_retry(URLS, headers, ...)
   }
   return(output)
 }
