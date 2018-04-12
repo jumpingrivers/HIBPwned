@@ -5,7 +5,7 @@
 \title{Search for data breaches associated with one or more accounts.}
 \usage{
 account_breaches(accounts, truncate = FALSE, domain = NULL,
-  as_list = TRUE, ...)
+  as_list = TRUE, verbose = TRUE, agent = NULL)
 }
 \arguments{
 \item{accounts}{A character vector of email addresses or account names}
@@ -17,7 +17,9 @@ breached site}
 
 \item{as_list}{whether to return results as a list (default, TRUE) or a data.frame}
 
-\item{...}{Optional passthrough to HIBP_headers()}
+\item{verbose}{whether to message about http errors and re-tries}
+
+\item{agent}{agent to be used as header in calls, by default "HIBPwned R pkg". # nolint}
 }
 \value{
 List of data.frames containing results

@@ -1,14 +1,14 @@
 #' Get all (nonsensitive) breached sites in HIBP
 #'
 #' @param domain Search a specific domain
-#' @param ... Optional passthrough to HIBP_headers()
+#' @inheritParams data_classes
 #'
 #' @return Data.frame containing breach details
 #' @export
 #'
 #' @examples
 #' breached_sites()
-breached_sites <- function(domain=NULL, ...) {
+breached_sites <- function(domain=NULL, verbose = TRUE, agent = NULL) {
   if (!is.null(domain) & (
     length(domain) != 1 | !inherits(domain, "character"))) {
     stop("Problematic domain")
@@ -18,7 +18,7 @@ breached_sites <- function(domain=NULL, ...) {
     URLS <- urltools::param_set(URLS, "domain", urltools::url_encode(domain)) # nolint
   }
 
-  res <- GETcontent(URLS, HIBP_headers(...))# nolint
+  res <- GETcontent(URLS, HIBP_headers(agent), verbose)# nolint
   if (identical(res, list())) {
     res <- data.frame(
       Title = NA, Name = NA, Domain = domain,

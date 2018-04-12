@@ -3,6 +3,10 @@
 
 * httr replaced with crul
 
+* only gives the possibility to change the agent name, no other customization now.
+
+* implemented unit tests with webmockr for testing the handling of http errors.
+
 # HIBPwned 0.1.6
 * Bug fix: Adding some time to the rate limit
 
