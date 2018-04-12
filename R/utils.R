@@ -6,8 +6,10 @@
 #' @inheritParams data_classes
 #'
 #' @return data.frame
+
 GETcontent <- function(URLS, headers, verbose) {# nolint
   output <- get_and_retry(URLS, headers, verbose)
+
   try_number <- 1
   while (is.null(output) && try_number < 6) {
     try_number <- try_number + 1
@@ -20,6 +22,7 @@ GETcontent <- function(URLS, headers, verbose) {# nolint
 
     Sys.sleep(2 ^ try_number)
     output <- get_and_retry(URLS, headers, verbose)
+
   }
   return(output)
 }
