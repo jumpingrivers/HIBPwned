@@ -52,9 +52,12 @@ account_breaches <- function(
   names(res) <- accounts
   if (!as_list){
     # bind the list and keep the account as a column
+    accounts <- accounts[unlist(lapply(res, ncol)) > 2]
+    res <- res[unlist(lapply(res, ncol)) > 2]
     account <- rep.int(accounts, times = lapply(res, nrow))
     if (length(res) > 1){
-      res <- do.call("rbind", res[unlist(lapply(res, ncol)) > 2])
+
+      res <- do.call("rbind", res)
 
     }else{
       res <- res[[1]]
