@@ -58,7 +58,7 @@ account_breaches <- function(
     if (length(res) > 1){
 
       res <- do.call("rbind", res)
-
+      rownames(res) <- c()
     }else{
       res <- res[[1]]
     }
