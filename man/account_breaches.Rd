@@ -15,7 +15,8 @@ breached site}
 
 \item{domain}{Search a specific domain}
 
-\item{as_list}{whether to return results as a list (default, TRUE) or a data.frame}
+\item{as_list}{whether to return results as a list (default, TRUE) or a data.frame,
+When returned as a data.frame only accounts with at least one breach are returned.}
 
 \item{verbose}{whether to message about http errors and re-tries}
 

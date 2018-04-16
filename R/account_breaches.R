@@ -4,7 +4,8 @@
 #' @param truncate Whether responses should be trimmed to just name of
 #' breached site
 #' @param domain Search a specific domain
-#' @param as_list whether to return results as a list (default, TRUE) or a data.frame
+#' @param as_list whether to return results as a list (default, TRUE) or a data.frame,
+#'  When returned as a data.frame only accounts with at least one breach are returned.
 #' @inheritParams data_classes
 #'
 #' @return List of data.frames containing results
@@ -53,7 +54,7 @@ account_breaches <- function(
     # bind the list and keep the account as a column
     account <- rep.int(accounts, times = lapply(res, nrow))
     if (length(res) > 1){
-      res <- do.call("rbind", res)
+      res <- do.call("rbind", res[unlist(lapply(res, ncol)) > 2])
 
     }else{
       res <- res[[1]]
