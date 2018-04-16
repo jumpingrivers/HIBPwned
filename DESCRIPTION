@@ -1,6 +1,6 @@
 Package: HIBPwned
 Title: Bindings for the 'HaveIBeenPwned.com' Data Breach API
-Version: 0.1.6
+Version: 0.1.7
 Authors@R: c(person("Steph", "Locke"
              , email = "stephanie.g.locke@gmail.com"
              , role = c("aut", "cre"))
@@ -32,6 +32,6 @@ Imports:
     memoise
 RoxygenNote: 6.0.1.9000
 VignetteBuilder: knitr
-URL: https://github.com/lockedata/HIBPwned,https://itsalocke.com/hibpwned/
+URL: https://github.com/lockedata/HIBPwned, https://itsalocke.com/hibpwned/
 BugReports: https://github.com/lockedata/HIBPwned/issues
 Encoding: UTF-8
