@@ -108,7 +108,11 @@
 <a href="#hibpwned-0-1-7" class="anchor"></a>HIBPwned 0.1.7<small> Unreleased </small>
 </h1>
 <ul>
-<li>account_breaches: new as_list argument, when FALSE the function returns a data.frame instead of a list (TRUE, default and old behaviour).</li>
+<li><p>account_breaches: new as_list argument, when FALSE the function returns a data.frame instead of a list (TRUE, default and old behaviour).</p></li>
+<li><p>httr replaced with crul</p></li>
+<li><p>only gives the possibility to change the agent name, no other customization now.</p></li>
+<li><p>implemented unit tests with webmockr for testing the handling of http errors.</p></li>
+<li><p>now caches results inside an active R session thanks to <code>memoise</code>.</p></li>
 </ul>
 </div>
     <div id="hibpwned-0-1-6" class="section level1">

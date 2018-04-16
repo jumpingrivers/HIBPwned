@@ -2,7 +2,9 @@
 #' a paste
 #'
 #' @param emails A character vector of email addresses
-#' @param ... Optional passthrough to HIBP_headers()
+#' @inheritParams data_classes
+#'
+#' @inherit data_classes details
 #'
 #' @return List of data.frames containing results
 #' @details According to the API docs
@@ -15,7 +17,8 @@
 #' pastes(c("steff.sullivan@gmail.com","stephanie.g.locke@gmail.com"))
 pastes <- function(
                    emails
-                   , ...) {
+                   , verbose = TRUE
+                   , agent = NULL) {
   if (length(emails) == 0 | !inherits(emails, "character")){
     stop("Problematic emails")
   }
@@ -26,7 +29,7 @@ pastes <- function(
     , encoded
   )
 
-  res <- lapply(URLS, GETcontent, HIBP_headers(...))# nolint
+  res <- lapply(URLS, GETcontent, HIBP_headers(agent), verbose)# nolint
   names(res) <- emails
 
   return(res)

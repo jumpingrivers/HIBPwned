@@ -5,7 +5,7 @@
 \title{Search for data breaches associated with one or more accounts.}
 \usage{
 account_breaches(accounts, truncate = FALSE, domain = NULL,
-  as_list = TRUE, ...)
+  as_list = TRUE, verbose = TRUE, agent = NULL)
 }
 \arguments{
 \item{accounts}{A character vector of email addresses or account names}
@@ -15,15 +15,24 @@ breached site}
 
 \item{domain}{Search a specific domain}
 
-\item{as_list}{whether to return results as a list (default, TRUE) or a data.frame}
+\item{as_list}{whether to return results as a list (default, TRUE) or a data.frame,
+When returned as a data.frame only accounts with at least one breach are returned.}
 
-\item{...}{Optional passthrough to HIBP_headers()}
+\item{verbose}{whether to message about http errors and re-tries}
+
+\item{agent}{agent to be used as header in calls, by default "HIBPwned R pkg". # nolint}
 }
 \value{
 List of data.frames containing results
 }
 \description{
 Search for data breaches associated with one or more accounts.
+}
+\details{
+Note that the package uses \code{memoise}
+(\url{https://github.com/r-lib/memoise})
+with no timeout argument
+so that results are cached inside an active R session.
 }
 \examples{
 account_breaches(c("steff.sullivan@gmail.com","stephanie.g.locke@gmail.com"))

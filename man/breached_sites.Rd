@@ -4,18 +4,26 @@
 \alias{breached_sites}
 \title{Get all (nonsensitive) breached sites in HIBP}
 \usage{
-breached_sites(domain = NULL, ...)
+breached_sites(domain = NULL, verbose = TRUE, agent = NULL)
 }
 \arguments{
 \item{domain}{Search a specific domain}
 
-\item{...}{Optional passthrough to HIBP_headers()}
+\item{verbose}{whether to message about http errors and re-tries}
+
+\item{agent}{agent to be used as header in calls, by default "HIBPwned R pkg". # nolint}
 }
 \value{
 Data.frame containing breach details
 }
 \description{
 Get all (nonsensitive) breached sites in HIBP
+}
+\details{
+Note that the package uses \code{memoise}
+(\url{https://github.com/r-lib/memoise})
+with no timeout argument
+so that results are cached inside an active R session.
 }
 \examples{
 breached_sites()

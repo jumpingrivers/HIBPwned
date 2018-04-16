@@ -22,12 +22,14 @@ Suggests:
     testthat,
     knitr,
     rmarkdown,
-    lintr
-Imports:
+    lintr,
+    webmockr
+Imports: 
     crul,
     urltools,
     jsonlite,
-    ratelimitr
+    ratelimitr,
+    memoise
 RoxygenNote: 6.0.1.9000
 VignetteBuilder: knitr
 URL: https://github.com/lockedata/HIBPwned,https://itsalocke.com/hibpwned/

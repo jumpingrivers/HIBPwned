@@ -105,14 +105,22 @@
     <p>It calls a helper function that retries up to 6 times</p>
     
 
-    <pre class="usage"><span class='fu'>GETcontent</span>(<span class='no'>...</span>)</pre>
+    <pre class="usage"><span class='fu'>GETcontent</span>(<span class='no'>URLS</span>, <span class='no'>headers</span>, <span class='no'>verbose</span>)</pre>
     
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>...</th>
-      <td><p>Pass through arguments</p></td>
+      <th>URLS</th>
+      <td><p>urls</p></td>
+    </tr>
+    <tr>
+      <th>headers</th>
+      <td><p>headers as built by HIBP_headers()</p></td>
+    </tr>
+    <tr>
+      <th>verbose</th>
+      <td><p>whether to message about http errors and re-tries</p></td>
     </tr>
     </table>
     
