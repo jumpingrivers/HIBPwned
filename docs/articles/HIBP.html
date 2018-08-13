@@ -15,7 +15,7 @@
 <![endif]--><link href="../lockedata.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container template-vignette">
+    <div class="container template-article">
       <header><div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
     <div class="navbar-header">
@@ -24,7 +24,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">HIBPwned</a>
+      <a class="navbar-brand" href="../index.html"></a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -70,20 +70,20 @@
 
       
       </header><div class="row">
-  <div class="col-md-9">
+  <div class="col-md-9 contents">
     <div class="page-header toc-ignore">
       <h1>Have I Been Pwned? API</h1>
                         <h4 class="author">Steph Locke</h4>
             
-            <h4 class="date">2018-04-12</h4>
+            <h4 class="date">2018-08-13</h4>
       
-      <small>Source: <a href="https://github.com/lockedata/HIBPwned/blob/master/vignettes/HIBP.Rmd"><code>vignettes/HIBP.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/lockedata/HIBPwned/blob/master/vignettes/HIBP.Rmd"><code>vignettes/HIBP.Rmd</code></a></small>
+      <div class="hidden name"><code>HIBP.Rmd</code></div>
 
     </div>
 
     
     
-<div class="contents">
 <p>Utilising the <a href="https://haveibeenpwned.com/API/v2">HaveIBeenPwned.com API</a>, check whether email addresses and/or user names have been present in a publicly disclosed data breach.</p>
 <p>The R package aims to be / is a feature complete wrapper of the HaveIBeenPowned API, and is useful for situations where you may want to assess data breaches or check whether one or more email addresses have been compromised.</p>
 <p>If you get a lot of value out of this package, do consider <a href="https://haveibeenpwned.com/Donate">donating to HIBP</a> since Troy Hunt does not put any limits on the API and it’s a tremendous service.</p>
@@ -122,26 +122,26 @@
 ##   [3] "Age groups"                       "Ages"                            
 ##   [5] "Apps installed on devices"        "Astrological signs"              
 ##   [7] "Auth tokens"                      "Avatars"                         
-##   [9] "Bank account numbers"             "Banking PINs"                    
-##  [11] "Beauty ratings"                   "Biometric data"                  
-##  [13] "Browser user agent details"       "Buying preferences"              
-##  [15] "Car ownership statuses"           "Career levels"                   
-##  [17] "Cellular network names"           "Charitable donations"            
-##  [19] "Chat logs"                        "Credit card CVV"                 
-##  [21] "Credit cards"                     "Credit status information"       
-##  [23] "Customer feedback"                "Customer interactions"           
-##  [25] "Dates of birth"                   "Deceased date"                   
-##  [27] "Deceased statuses"                "Device information"              
-##  [29] "Device usage tracking data"       "Drinking habits"                 
-##  [31] "Drug habits"                      "Eating habits"                   
-##  [33] "Education levels"                 "Email addresses"                 
-##  [35] "Email messages"                   "Employers"                       
-##  [37] "Ethnicities"                      "Family members' names"           
-##  [39] "Family plans"                     "Family structure"                
-##  [41] "Financial investments"            "Financial transactions"          
-##  [43] "Fitness levels"                   "Genders"                         
-##  [45] "Geographic locations"             "Government issued IDs"           
-##  [47] "Health insurance information"     "Historical passwords"            
+##   [9] "Bank account numbers"             "Beauty ratings"                  
+##  [11] "Biometric data"                   "Browser user agent details"      
+##  [13] "Buying preferences"               "Car ownership statuses"          
+##  [15] "Career levels"                    "Cellular network names"          
+##  [17] "Charitable donations"             "Chat logs"                       
+##  [19] "Credit card CVV"                  "Credit cards"                    
+##  [21] "Credit status information"        "Customer feedback"               
+##  [23] "Customer interactions"            "Dates of birth"                  
+##  [25] "Deceased date"                    "Deceased statuses"               
+##  [27] "Device information"               "Device usage tracking data"      
+##  [29] "Drinking habits"                  "Drug habits"                     
+##  [31] "Eating habits"                    "Education levels"                
+##  [33] "Email addresses"                  "Email messages"                  
+##  [35] "Employers"                        "Ethnicities"                     
+##  [37] "Family members' names"            "Family plans"                    
+##  [39] "Family structure"                 "Financial investments"           
+##  [41] "Financial transactions"           "Fitness levels"                  
+##  [43] "Genders"                          "Geographic locations"            
+##  [45] "Government issued IDs"            "Health insurance information"    
+##  [47] "Historical passwords"             "Home loan information"           
 ##  [49] "Home ownership statuses"          "Homepage URLs"                   
 ##  [51] "IMEI numbers"                     "IMSI numbers"                    
 ##  [53] "Income levels"                    "Instant messenger identities"    
@@ -149,31 +149,31 @@
 ##  [57] "MAC addresses"                    "Marital statuses"                
 ##  [59] "Names"                            "Nationalities"                   
 ##  [61] "Net worths"                       "Nicknames"                       
-##  [63] "Parenting plans"                  "Partial credit card data"        
-##  [65] "Passport numbers"                 "Password hints"                  
-##  [67] "Passwords"                        "Payment histories"               
-##  [69] "Payment methods"                  "Personal descriptions"           
-##  [71] "Personal health data"             "Personal interests"              
-##  [73] "Phone numbers"                    "Physical addresses"              
-##  [75] "Physical attributes"              "Political donations"             
-##  [77] "Political views"                  "Private messages"                
-##  [79] "Professional skills"              "Profile photos"                  
-##  [81] "Purchases"                        "Purchasing habits"               
-##  [83] "Races"                            "Recovery email addresses"        
-##  [85] "Relationship statuses"            "Religions"                       
-##  [87] "Reward program balances"          "Salutations"                     
-##  [89] "School grades (class levels)"     "Security questions and answers"  
-##  [91] "Sexual fetishes"                  "Sexual orientations"             
-##  [93] "Smoking habits"                   "SMS messages"                    
-##  [95] "Social connections"               "Social media profiles"           
-##  [97] "Spoken languages"                 "Support tickets"                 
-##  [99] "Survey results"                   "Time zones"                      
-## [101] "Travel habits"                    "User statuses"                   
-## [103] "User website URLs"                "Usernames"                       
-## [105] "Utility bills"                    "Vehicle details"                 
-## [107] "Website activity"                 "Work habits"                     
-## [109] "Years of birth"                   "Years of professional experience"</code></pre>
-</div>
+##  [63] "Occupations"                      "Parenting plans"                 
+##  [65] "Partial credit card data"         "Passport numbers"                
+##  [67] "Password hints"                   "Passwords"                       
+##  [69] "Payment histories"                "Payment methods"                 
+##  [71] "Personal descriptions"            "Personal health data"            
+##  [73] "Personal interests"               "Phone numbers"                   
+##  [75] "Physical addresses"               "Physical attributes"             
+##  [77] "PINs"                             "Political donations"             
+##  [79] "Political views"                  "Private messages"                
+##  [81] "Professional skills"              "Profile photos"                  
+##  [83] "Purchases"                        "Purchasing habits"               
+##  [85] "Races"                            "Recovery email addresses"        
+##  [87] "Relationship statuses"            "Religions"                       
+##  [89] "Reward program balances"          "Salutations"                     
+##  [91] "School grades (class levels)"     "Security questions and answers"  
+##  [93] "Sexual fetishes"                  "Sexual orientations"             
+##  [95] "Smoking habits"                   "SMS messages"                    
+##  [97] "Social connections"               "Social media profiles"           
+##  [99] "Spoken languages"                 "Support tickets"                 
+## [101] "Survey results"                   "Time zones"                      
+## [103] "Travel habits"                    "User statuses"                   
+## [105] "User website URLs"                "Usernames"                       
+## [107] "Utility bills"                    "Vehicle details"                 
+## [109] "Website activity"                 "Work habits"                     
+## [111] "Years of birth"                   "Years of professional experience"</code></pre>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -192,6 +192,8 @@
 
       </footer>
 </div>
+
+  
 
   </body>
 </html>

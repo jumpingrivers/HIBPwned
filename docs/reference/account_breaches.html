@@ -49,7 +49,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">HIBPwned</a>
+      <a class="navbar-brand" href="../index.html">Search for data breaches associated with one or more accounts.</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -94,16 +94,19 @@
       
       </header>
 
-      <div class="row">
+<div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Search for data breaches associated with one or more accounts.</h1>
-    <small>Source: <a href='https://github.com/lockedata/HIBPwned/blob/master/R/account_breaches.R'><code>R/account_breaches.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/lockedata/HIBPwned/blob/master/R/account_breaches.R'><code>R/account_breaches.R</code></a></small>
+    <div class="hidden name"><code>account_breaches.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Search for data breaches associated with one or more accounts.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>account_breaches</span>(<span class='no'>accounts</span>, <span class='kw'>truncate</span> <span class='kw'>=</span> <span class='fl'>FALSE</span>, <span class='kw'>domain</span> <span class='kw'>=</span> <span class='kw'>NULL</span>,
   <span class='kw'>as_list</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>agent</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
@@ -126,7 +129,8 @@ breached site</p></td>
     </tr>
     <tr>
       <th>as_list</th>
-      <td><p>whether to return results as a list (default, TRUE) or a data.frame</p></td>
+      <td><p>whether to return results as a list (default, TRUE) or a data.frame,
+When returned as a data.frame only accounts with at least one breach are returned.</p></td>
     </tr>
     <tr>
       <th>verbose</th>
@@ -222,6 +226,8 @@ so that results are cached inside an active R session.</p>
 
       </footer>
    </div>
+
+  
 
   </body>
 </html>

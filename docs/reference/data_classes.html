@@ -50,7 +50,8 @@ exposed in breaches — data_classes • HIBPwned</title>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">HIBPwned</a>
+      <a class="navbar-brand" href="../index.html">Get list of classes of data that have been
+exposed in breaches</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -95,18 +96,21 @@ exposed in breaches — data_classes • HIBPwned</title>
       
       </header>
 
-      <div class="row">
+<div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Get list of classes of data that have been
 exposed in breaches</h1>
-    <small>Source: <a href='https://github.com/lockedata/HIBPwned/blob/master/R/data_classes.R'><code>R/data_classes.R</code></a></small>
+    <small class="dont-index">Source: <a href='https://github.com/lockedata/HIBPwned/blob/master/R/data_classes.R'><code>R/data_classes.R</code></a></small>
+    <div class="hidden name"><code>data_classes.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Get list of classes of data that have been
 exposed in breaches</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>data_classes</span>(<span class='kw'>verbose</span> <span class='kw'>=</span> <span class='fl'>TRUE</span>, <span class='kw'>agent</span> <span class='kw'>=</span> <span class='kw'>NULL</span>)</pre>
     
@@ -140,26 +144,26 @@ so that results are cached inside an active R session.</p>
 #&gt;   [3] "Age groups"                       "Ages"                            
 #&gt;   [5] "Apps installed on devices"        "Astrological signs"              
 #&gt;   [7] "Auth tokens"                      "Avatars"                         
-#&gt;   [9] "Bank account numbers"             "Banking PINs"                    
-#&gt;  [11] "Beauty ratings"                   "Biometric data"                  
-#&gt;  [13] "Browser user agent details"       "Buying preferences"              
-#&gt;  [15] "Car ownership statuses"           "Career levels"                   
-#&gt;  [17] "Cellular network names"           "Charitable donations"            
-#&gt;  [19] "Chat logs"                        "Credit card CVV"                 
-#&gt;  [21] "Credit cards"                     "Credit status information"       
-#&gt;  [23] "Customer feedback"                "Customer interactions"           
-#&gt;  [25] "Dates of birth"                   "Deceased date"                   
-#&gt;  [27] "Deceased statuses"                "Device information"              
-#&gt;  [29] "Device usage tracking data"       "Drinking habits"                 
-#&gt;  [31] "Drug habits"                      "Eating habits"                   
-#&gt;  [33] "Education levels"                 "Email addresses"                 
-#&gt;  [35] "Email messages"                   "Employers"                       
-#&gt;  [37] "Ethnicities"                      "Family members' names"           
-#&gt;  [39] "Family plans"                     "Family structure"                
-#&gt;  [41] "Financial investments"            "Financial transactions"          
-#&gt;  [43] "Fitness levels"                   "Genders"                         
-#&gt;  [45] "Geographic locations"             "Government issued IDs"           
-#&gt;  [47] "Health insurance information"     "Historical passwords"            
+#&gt;   [9] "Bank account numbers"             "Beauty ratings"                  
+#&gt;  [11] "Biometric data"                   "Browser user agent details"      
+#&gt;  [13] "Buying preferences"               "Car ownership statuses"          
+#&gt;  [15] "Career levels"                    "Cellular network names"          
+#&gt;  [17] "Charitable donations"             "Chat logs"                       
+#&gt;  [19] "Credit card CVV"                  "Credit cards"                    
+#&gt;  [21] "Credit status information"        "Customer feedback"               
+#&gt;  [23] "Customer interactions"            "Dates of birth"                  
+#&gt;  [25] "Deceased date"                    "Deceased statuses"               
+#&gt;  [27] "Device information"               "Device usage tracking data"      
+#&gt;  [29] "Drinking habits"                  "Drug habits"                     
+#&gt;  [31] "Eating habits"                    "Education levels"                
+#&gt;  [33] "Email addresses"                  "Email messages"                  
+#&gt;  [35] "Employers"                        "Ethnicities"                     
+#&gt;  [37] "Family members' names"            "Family plans"                    
+#&gt;  [39] "Family structure"                 "Financial investments"           
+#&gt;  [41] "Financial transactions"           "Fitness levels"                  
+#&gt;  [43] "Genders"                          "Geographic locations"            
+#&gt;  [45] "Government issued IDs"            "Health insurance information"    
+#&gt;  [47] "Historical passwords"             "Home loan information"           
 #&gt;  [49] "Home ownership statuses"          "Homepage URLs"                   
 #&gt;  [51] "IMEI numbers"                     "IMSI numbers"                    
 #&gt;  [53] "Income levels"                    "Instant messenger identities"    
@@ -167,30 +171,31 @@ so that results are cached inside an active R session.</p>
 #&gt;  [57] "MAC addresses"                    "Marital statuses"                
 #&gt;  [59] "Names"                            "Nationalities"                   
 #&gt;  [61] "Net worths"                       "Nicknames"                       
-#&gt;  [63] "Parenting plans"                  "Partial credit card data"        
-#&gt;  [65] "Passport numbers"                 "Password hints"                  
-#&gt;  [67] "Passwords"                        "Payment histories"               
-#&gt;  [69] "Payment methods"                  "Personal descriptions"           
-#&gt;  [71] "Personal health data"             "Personal interests"              
-#&gt;  [73] "Phone numbers"                    "Physical addresses"              
-#&gt;  [75] "Physical attributes"              "Political donations"             
-#&gt;  [77] "Political views"                  "Private messages"                
-#&gt;  [79] "Professional skills"              "Profile photos"                  
-#&gt;  [81] "Purchases"                        "Purchasing habits"               
-#&gt;  [83] "Races"                            "Recovery email addresses"        
-#&gt;  [85] "Relationship statuses"            "Religions"                       
-#&gt;  [87] "Reward program balances"          "Salutations"                     
-#&gt;  [89] "School grades (class levels)"     "Security questions and answers"  
-#&gt;  [91] "Sexual fetishes"                  "Sexual orientations"             
-#&gt;  [93] "Smoking habits"                   "SMS messages"                    
-#&gt;  [95] "Social connections"               "Social media profiles"           
-#&gt;  [97] "Spoken languages"                 "Support tickets"                 
-#&gt;  [99] "Survey results"                   "Time zones"                      
-#&gt; [101] "Travel habits"                    "User statuses"                   
-#&gt; [103] "User website URLs"                "Usernames"                       
-#&gt; [105] "Utility bills"                    "Vehicle details"                 
-#&gt; [107] "Website activity"                 "Work habits"                     
-#&gt; [109] "Years of birth"                   "Years of professional experience"</div></pre>
+#&gt;  [63] "Occupations"                      "Parenting plans"                 
+#&gt;  [65] "Partial credit card data"         "Passport numbers"                
+#&gt;  [67] "Password hints"                   "Passwords"                       
+#&gt;  [69] "Payment histories"                "Payment methods"                 
+#&gt;  [71] "Personal descriptions"            "Personal health data"            
+#&gt;  [73] "Personal interests"               "Phone numbers"                   
+#&gt;  [75] "Physical addresses"               "Physical attributes"             
+#&gt;  [77] "PINs"                             "Political donations"             
+#&gt;  [79] "Political views"                  "Private messages"                
+#&gt;  [81] "Professional skills"              "Profile photos"                  
+#&gt;  [83] "Purchases"                        "Purchasing habits"               
+#&gt;  [85] "Races"                            "Recovery email addresses"        
+#&gt;  [87] "Relationship statuses"            "Religions"                       
+#&gt;  [89] "Reward program balances"          "Salutations"                     
+#&gt;  [91] "School grades (class levels)"     "Security questions and answers"  
+#&gt;  [93] "Sexual fetishes"                  "Sexual orientations"             
+#&gt;  [95] "Smoking habits"                   "SMS messages"                    
+#&gt;  [97] "Social connections"               "Social media profiles"           
+#&gt;  [99] "Spoken languages"                 "Support tickets"                 
+#&gt; [101] "Survey results"                   "Time zones"                      
+#&gt; [103] "Travel habits"                    "User statuses"                   
+#&gt; [105] "User website URLs"                "Usernames"                       
+#&gt; [107] "Utility bills"                    "Vehicle details"                 
+#&gt; [109] "Website activity"                 "Work habits"                     
+#&gt; [111] "Years of birth"                   "Years of professional experience"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
     <h2>Contents</h2>
@@ -218,6 +223,8 @@ so that results are cached inside an active R session.</p>
 
       </footer>
    </div>
+
+  
 
   </body>
 </html>

@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • HIBPwned</title>
+<title>Used to extract content from a GET request and collapse to a data.frame — .GETcontent • HIBPwned</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -39,7 +39,7 @@
   </head>
 
   <body>
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -49,7 +49,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html"></a>
+      <a class="navbar-brand" href="../index.html">Used to extract content from a GET request and collapse to a data.frame</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
@@ -97,69 +97,51 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/lockedata/HIBPwned/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>Used to extract content from a GET request and collapse to a data.frame</h1>
+    <small class="dont-index">Source: <a href='https://github.com/lockedata/HIBPwned/blob/master/R/utils.R'><code>R/utils.R</code></a></small>
+    <div class="hidden name"><code>dot-GETcontent.Rd</code></div>
     </div>
 
-    <div id="hibpwned-0-1-7" class="section level1">
-<h1 class="page-header">
-<a href="#hibpwned-0-1-7" class="anchor"></a>HIBPwned 0.1.7<small> 2018-04-17 </small>
-</h1>
-<ul>
-<li><p>account_breaches: new as_list argument, when FALSE the function returns a data.frame instead of a list (TRUE, default and old behaviour).</p></li>
-<li><p>httr replaced with crul</p></li>
-<li><p>only gives the possibility to change the agent name, no other customization now.</p></li>
-<li><p>implemented unit tests with webmockr for testing the handling of http errors.</p></li>
-<li><p>now caches results inside an active R session thanks to <code>memoise</code>.</p></li>
-</ul>
-</div>
-    <div id="hibpwned-0-1-6" class="section level1">
-<h1 class="page-header">
-<a href="#hibpwned-0-1-6" class="anchor"></a>HIBPwned 0.1.6<small> 2017-05-30 </small>
-</h1>
-<ul>
-<li>Bug fix: Adding some time to the rate limit</li>
-</ul>
-</div>
-    <div id="hibpwned-0-1-5" class="section level1">
-<h1 class="page-header">
-<a href="#hibpwned-0-1-5" class="anchor"></a>HIBPwned 0.1.5<small> Unreleased </small>
-</h1>
-<ul>
-<li>Rate Limit: Now using the package <code>ratelimitr</code> for more elegant rate limiting</li>
-</ul>
-</div>
-    <div id="hibpwned-0-1-3" class="section level1">
-<h1 class="page-header">
-<a href="#hibpwned-0-1-3" class="anchor"></a>HIBPwned 0.1.3<small> 2016-09-14 </small>
-</h1>
-<ul>
-<li>Rate Limit: HaveIBeenPwned is now rate limited to one request per 1.5 seconds. To accommodate this, an artificial wait has been added at the start of each call.</li>
-</ul>
-</div>
-    <div id="hibpwned-0-1-0-0" class="section level1">
-<h1 class="page-header">
-<a href="#hibpwned-0-1-0-0" class="anchor"></a>HIBPwned 0.1.0.0<small> 2016-06-01 </small>
-</h1>
-<ul>
-<li>New package!</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    
+    <p>It calls a helper function that retries up to 6 times</p>
+    
+    </div>
 
+    <pre class="usage"><span class='fu'>.GETcontent</span>(<span class='no'>URLS</span>, <span class='no'>headers</span>, <span class='no'>verbose</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>URLS</th>
+      <td><p>urls</p></td>
+    </tr>
+    <tr>
+      <th>headers</th>
+      <td><p>headers as built by HIBP_headers()</p></td>
+    </tr>
+    <tr>
+      <th>verbose</th>
+      <td><p>whether to message about http errors and re-tries</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>data.frame</p>
+    
+
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#hibpwned-0-1-7">0.1.7</a></li>
-        <li><a href="#hibpwned-0-1-6">0.1.6</a></li>
-        <li><a href="#hibpwned-0-1-5">0.1.5</a></li>
-        <li><a href="#hibpwned-0-1-3">0.1.3</a></li>
-        <li><a href="#hibpwned-0-1-0-0">0.1.0.0</a></li>
-      </ul>
-    </div>
-  </div>
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+          </ul>
 
+  </div>
 </div>
 
       <footer>
