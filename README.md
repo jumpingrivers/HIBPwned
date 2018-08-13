@@ -14,5 +14,7 @@ If you get a lot of value out of this package, do consider donating to [HaveIbee
 
 ----
 
+Wanna report a bug or suggest a feature? Great stuff! For more information on how to contribute check out [our contributing guide](CONTRIBUTING.md).
+
 Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
 
