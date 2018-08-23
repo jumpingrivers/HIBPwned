@@ -24,5 +24,8 @@ addons:
       - libssl1.0.0
 r_packages:
   - covr
+  - lintr
+before_test: 
+  - Rscript -e 'lintr::lint_package()'
 after_success:
   - Rscript -e 'covr::coveralls()'
