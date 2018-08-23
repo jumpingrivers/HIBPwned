@@ -24,7 +24,7 @@ account_breaches <- function(
                              , verbose = TRUE
                              , agent = NULL) {
 
-  if (length(accounts) == 0 | !inherits(accounts, "character")){
+  if(length(accounts)==0|!inherits(accounts, "character")){
     stop("Problematic accounts")
   }
 
