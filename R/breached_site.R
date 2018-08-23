@@ -13,6 +13,7 @@
 breached_site <- function(name, verbose = TRUE, agent = NULL) {
   if(is.null(name)|length(name)!= 1|!inherits(name,"character")){stop("Problematic breach name")}
 
+
   URLS <- "https://haveibeenpwned.com/api/breach/" # nolint
   encoded <- urltools::url_encode(name)
   URLS <- paste0(URLS, encoded) # nolint
