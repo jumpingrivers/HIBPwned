@@ -25,7 +25,7 @@ addons:
 r_packages:
   - covr
   - lintr
-before_script:
+after_script:
   - R CMD INSTALL $PKG_TARBALL
   - Rscript -e 'lintr::lint_package()'
 after_success:
