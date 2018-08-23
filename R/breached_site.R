@@ -11,7 +11,7 @@
 #' @examples
 #' breached_site("Adobe")
 breached_site <- function(name, verbose = TRUE, agent = NULL) {
-  if (is.null(name) | length(name) != 1 | !inherits(name, "character")){
+  if(is.null(name)|length(name)!= 1|!inherits(name, "character")){
     stop("Problematic breach name")
   }
 
