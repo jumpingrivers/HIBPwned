@@ -39,7 +39,7 @@ account_breaches <- function(
 
   encoded <- urltools::url_encode(accounts)
   URLS <- paste0( # nolint
-    "https://haveibeenpwned.com/api/breachedaccount/"
+    "https://haveibeenpwned.com/api/v2/breachedaccount/"
     , encoded
   )
 
