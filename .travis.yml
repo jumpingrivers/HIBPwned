@@ -26,7 +26,6 @@ addons:
 r_packages:
   - covr
   - lintr
-  - httr
 after_script:
   - R CMD INSTALL $PKG_TARBALL
   - Rscript -e 'lintr::lint_package()'
