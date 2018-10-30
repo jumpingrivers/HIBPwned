@@ -34,7 +34,8 @@ Imports:
     urltools,
     jsonlite,
     ratelimitr,
-    memoise
+    memoise,
+    httr
 RoxygenNote: 6.0.1.9000
 VignetteBuilder: knitr
 URL: https://github.com/lockedata/HIBPwned, https://itsalocke.com/hibpwned/
