@@ -16,6 +16,7 @@ matrix:
       r: devel
     - os: osx
       r: release
+      fortran: false
 
 
 addons:
