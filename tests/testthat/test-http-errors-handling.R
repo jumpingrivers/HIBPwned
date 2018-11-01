@@ -17,13 +17,13 @@ test_that("no 404 http errors are handled as expected", {
 test_that("404 http errors are handled as expected", {
   memoise::forget(GETcontent)
   skip_on_cran()
-  webmockr::enable()
+  webmockr::enable(adapter = "crul")
   stub <- webmockr::stub_request("get", "https://haveibeenpwned.com/api/breaches") # nolint
   webmockr::to_return(stub, status = 404)
   output <- HIBPwned::breached_sites()
   expect_is(output, "data.frame")
   expect_true(is.na(output$Name))
-  webmockr::disable()
+  webmockr::disable(adapter = "crul")
   memoise::forget(GETcontent)
 
 })
