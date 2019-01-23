@@ -45,4 +45,11 @@ stages:
     if: branch = master
 
 notifications:
-  webhooks: https://api.netlify.com/build_hooks/5c4856cd4cab11018c5f644f
+  webhooks:
+    urls:
+      - https://api.netlify.com/build_hooks/5c4856cd4cab11018c5f644f
+    on_success: always
+    on_failure: never
+    on_start: never
+    on_cancel: never
+    on_error: never
