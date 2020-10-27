@@ -9,6 +9,12 @@ Utilising the [HaveIBeenPwned.com API](https://haveibeenpwned.com/API/v2), check
 
 Head over to the [package website](https://itsalocke.com/hibpwned/) for more information, in particular [the functions reference](https://itsalocke.com/hibpwned/reference/), [an intro to the package usage](https://itsalocke.com/hibpwned/articles/hibp) and [the news](https://itsalocke.com/hibpwned/articles/hibp).
 
+If you want see how others use HIBPwned package, have a look at some of the use cases:
+
+ * [How many CRAN package maintainers have been pwned?](https://itsalocke.com/blog/how-many-cran-package-maintainers-have-been-pwned/)
+ * [Toolsmith Release Advisory: Steph Locke’s HIBPwned R package](https://www.maritimecybersecurity.center/toolsmith-release-advisory-steph-lockes-hibpwned-r-package/)
+
+
 ----
 
 If you get a lot of value out of this package, do consider donating to [HaveIbeenPwned.com](https://haveibeenpwned.com/Donate) as it's a tremendous service.
